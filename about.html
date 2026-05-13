@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="/src/css/style.css" rel="stylesheet"/>
+    <script src="/src/js/main.js" type="module"></script>
+    <title>About | Nasasiira Patrick</title>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden" style="overflow: hidden;">
+<div id="loader">
+    <div class="loader-text">NASASIIRA</div>
+    <div class="loader-bar"></div>
+</div>
+<nav class="fixed top- margin-mobile md:top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/15 bg-surface-variant/60 backdrop-blur-xl shadow-2xl z-50 flex justify-between items-center px-gutter py-4 transition-all duration-500">
+<a class="font-display-lg text-[20px] md:text-headline-sm text-primary uppercase tracking-widest" href="index.html">
+            NASASIIRA
+        </a>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="about.html">About</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="works.html">Works</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="exhibitions.html">Exhibitions</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="videos.html">Videos</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block bg-primary-container text-on-primary px-6 py-2 rounded-full font-label-md hover:scale-105 active:scale-95 transition-all shadow-lg" href="contact.html">
+                Connect
+            </a>
+<button class="md:hidden text-primary p-2" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Drawer -->
+<div class="fixed inset-0 z-[60] bg-background/95 backdrop-blur-2xl transition-all duration-500 translate-x-full" id="mobile-drawer">
+<div class="flex flex-col h-full p-margin-mobile">
+<div class="flex justify-between items-center mb-stack-lg">
+<span class="font-display-lg text-headline-sm text-primary uppercase tracking-widest">NP</span>
+<button class="text-primary p-2" id="menu-close">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-stack-md mt-10">
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-display-lg-mobile text-primary hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="works.html">Works</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="exhibitions.html">Exhibitions</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="videos.html">Videos</a>
+<a class="text-display-lg-mobile text-primary mt-10" href="contact.html">Connect —</a>
+</div>
+<div class="mt-auto pb-10 flex gap-8">
+<a class="text-on-surface-variant" href="#">Instagram</a>
+<a class="text-on-surface-variant" href="#">LinkedIn</a>
+<a class="text-on-surface-variant" href="#">Behance</a>
+</div>
+</div>
+</div>
+<main class="min-h-screen pt-32 md:pt-48">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-start">
+<div class="relative md:sticky top-32 group">
+<div class="aspect-[1/1] md:aspect-[4/5] rounded-xl overflow-hidden glass-card p-2">
+<img alt="Nasasiira Patrick Portrait" class="w-full h-full object-cover rounded-lg filter grayscale contrast-125 brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhBl_ZBj45QcBZ-xFUW9FSRjeEKbp6K-xVOuOJmeo_OlAc6IyQDxkRae5NrYfieqouLg9Is8ZZUewqi7QgZrZRhxyMbwUHx56zZatL74aAJtBb7iKTM7fzzsfkzX-0PsUEL8eU-RDeAiNrNDwf7e_rv2W4HvbUOxBBtDqPccTp2SSscsWl8YDHik0OAHI9Gs_21Kcd7TMnCcl3sd1K3BkBJkYHRUQEWxz5bM21hIpJFWorRbraaDY0a_QGbyw5K3pBZ7qqdvgAoKo"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+</div>
+<div class="flex flex-col gap-stack-lg pb-stack-lg">
+<section>
+<span class="text-primary font-label-md text-label-md uppercase tracking-[0.2em] mb-4 block">About Me</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-md">Designing for the future of African digital landscapes.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Based in the intersection of culture and technology, I craft immersive visual narratives that bridge the gap between traditional heritage and futuristic digital interaction. My work is a testament to the power of cinematic luxury in the modern web media space.
+                    </p>
+<div class="mt-stack-md flex items-center gap-gutter">
+<button class="flex items-center gap-2 text-primary font-label-md text-label-md group">
+<span class="material-symbols-outlined">download</span>
+<span class="border-b-2 border-primary/30 group-hover:border-primary transition-colors pb-1">Download CV</span>
+</button>
+</div>
+</section>
+<section class="glass-card p-gutter rounded-xl bg-surface-variant/20">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+                        Leadership
+                    </h2>
+<ul class="space-y-4">
+<li class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Creative Director</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Nsasira Creative Labs (2021 — Present)</span>
+</li>
+<li class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Lead Designer</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Global Vision Media (2018 — 2021)</span>
+</li>
+</ul>
+</section>
+<section>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-md">Expertise</h2>
+<div class="grid grid-cols-2 gap-unit">
+<div class="p-4 rounded-lg bg-secondary-container/30 border border-outline-variant/20 hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined text-secondary block mb-2">camera</span>
+<span class="font-label-md text-label-md text-on-surface">Photography</span>
+</div>
+<div class="p-4 rounded-lg bg-secondary-container/30 border border-outline-variant/20 hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined text-secondary block mb-2">language</span>
+<span class="font-label-md text-label-md text-on-surface">Web Media</span>
+</div>
+<div class="p-4 rounded-lg bg-secondary-container/30 border border-outline-variant/20 hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined text-secondary block mb-2">movie</span>
+<span class="font-label-md text-label-md text-on-surface">Motion Design</span>
+</div>
+<div class="p-4 rounded-lg bg-secondary-container/30 border border-outline-variant/20 hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined text-secondary block mb-2">category</span>
+<span class="font-label-md text-label-md text-on-surface">Branding</span>
+</div>
+<div class="p-4 rounded-lg bg-secondary-container/30 border border-outline-variant/20 hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined text-secondary block mb-2">print</span>
+<span class="font-label-md text-label-md text-on-surface">Print Production</span>
+</div>
+<div class="p-4 rounded-lg bg-secondary-container/30 border border-outline-variant/20 hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined text-secondary block mb-2">touch_app</span>
+<span class="font-label-md text-label-md text-on-surface">Interaction Design</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="w-full pt-stack-lg pb-stack-md bg-background border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<span class="font-display-lg text-headline-sm md:text-headline-md text-on-surface">NASASIIRA</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mx-auto md:mx-0">
+                    © 2026 Nasasiira Patrick. All rights reserved. Built for the future of African design.
+                </p>
+</div>
+<div class="flex gap-stack-md mt-stack-md md:mt-0">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

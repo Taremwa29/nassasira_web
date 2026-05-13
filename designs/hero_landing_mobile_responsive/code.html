@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nasasiira Patrick | Visual Communication Designer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #14130e;
+            color: #e7e2d9;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-edge {
+            border: 1px solid rgba(231, 226, 217, 0.15);
+        }
+        .cinematic-gradient {
+            background: radial-gradient(circle at top right, #0F5F53 0%, #14130e 70%);
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(20, 19, 14, 0.2) 0%, rgba(20, 19, 14, 0.9) 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#8ed4c4",
+                      "surface-container-low": "#1d1c16",
+                      "inverse-surface": "#e7e2d9",
+                      "surface-container-lowest": "#0f0e09",
+                      "secondary-container": "#2c4d47",
+                      "secondary": "#abcec6",
+                      "on-secondary-container": "#9abcb5",
+                      "primary": "#8ed4c4",
+                      "on-tertiary": "#382f21",
+                      "on-primary-fixed-variant": "#005046",
+                      "tertiary-fixed-dim": "#d3c4b0",
+                      "on-surface": "#e7e2d9",
+                      "surface-bright": "#3b3933",
+                      "tertiary-fixed": "#f0e0cb",
+                      "on-surface-variant": "#bec9c5",
+                      "on-primary": "#003730",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#00201c",
+                      "on-tertiary-container": "#d6c7b2",
+                      "primary-container": "#0f5f53",
+                      "error-container": "#93000a",
+                      "tertiary-container": "#5d5342",
+                      "on-secondary-fixed-variant": "#2c4d47",
+                      "secondary-fixed-dim": "#abcec6",
+                      "background": "#14130e",
+                      "tertiary": "#d3c4b0",
+                      "surface-container-highest": "#36352f",
+                      "on-primary-container": "#90d6c7",
+                      "surface-container": "#21201a",
+                      "secondary-fixed": "#c6eae2",
+                      "surface-dim": "#14130e",
+                      "outline-variant": "#3f4946",
+                      "on-secondary": "#153630",
+                      "primary-fixed-dim": "#8ed4c4",
+                      "on-tertiary-fixed": "#221a0d",
+                      "surface-container-high": "#2b2a24",
+                      "surface": "#14130e",
+                      "on-primary-fixed": "#00201b",
+                      "primary-fixed": "#a9f0e0",
+                      "inverse-on-surface": "#32302b",
+                      "on-tertiary-fixed-variant": "#4f4536",
+                      "on-error-container": "#ffdad6",
+                      "outline": "#89938f",
+                      "on-background": "#e7e2d9",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#36352f",
+                      "inverse-primary": "#1f695d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "16px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "stack-lg": "80px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "stack-md": "32px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-lg": ["Montserrat"],
+                      "body-md": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "label-md": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "caption": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased">
+<!-- TopAppBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-40px)] max-w-container-max rounded-full border border-outline-variant/20 bg-surface/60 backdrop-blur-2xl text-primary flex justify-between items-center px-6 py-3 z-50 shadow-xl shadow-background/50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-headline-sm text-[18px] font-bold tracking-tighter text-on-surface">Nasasiira Patrick</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30">
+<img alt="Nasasiira Patrick Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a designer with a visionary expression, set against a dark, moody studio background with subtle emerald rim lighting. The style is cinematic and high-end, matching a luxury portfolio aesthetic. The lighting is soft yet dramatic, emphasizing texture and sophistication in a dark forest green environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNWkVH9a3otb7BHM8DAoHO5wO1IZruGm71J-7Hw7qitfrFwy-eqFQkZCJkjoaN3ViCvNVSy7Iqc0OI7iq4Tf6vZOR00Q_jKe7dPcCg2ih0txatCwBmKUbLEyNcGcIJHWDhsT7m-NbWqm0jV94Sf7AvX6ybhJ6SH5IGT81usTsUopl167O_XHuS00jjT90N9upZFfQgUfXhvgoeK1Id86ML_MXs5tjn33ue3UHdQfc3MI6R2n3yx2UWnSzi6PS30xFNTLDsEQTK1cI"/>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden flex flex-col justify-center items-center px-margin-mobile cinematic-gradient">
+<!-- Layered Photography Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A breathtaking, cinematic landscape of misty pine forests at dawn, where deep emerald greens and dark shadows create a sense of mystery and prestige. The atmosphere is thick with fog, captured in a high-end photography style that feels like an immersive gallery installation. The lighting is ethereal and low-key, emphasizing the lush, dark tones of a luxury natural environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVx56_9J8o9-q70-rwOWXL34BWqBwRFW9R06N-GOPsWK7X6IxqTMmZ-xwolWfR7ZaeRHLo4Yif28zzM1h45dcoWJ2wC3WFgMk2J306_-YmOjKz9chlhQuXum2HM7oGgBNwfk6nnBZz7FevExC2GtfP0WcOP5Rc4m04o0bh6HMbHEX-IV9E43upRk3ncKVRSGzo4h84IgZ4lMxM0l05_sqXgQJUsjiR0FkoPDpHIYHstccvYKsDJImyV1OyVfXXCpVZKpTePoanlDQ"/>
+<div class="hero-overlay absolute inset-0"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 text-center max-w-md mt-16">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-4 tracking-tighter uppercase font-black">
+                Nasasiira Patrick
+            </h1>
+<p class="font-body-md text-on-surface-variant mb-10 leading-relaxed px-4">
+                Visual Communication Designer <span class="text-primary mx-1">•</span> Photographer <span class="text-primary mx-1">•</span> Creative Director
+            </p>
+<div class="flex flex-col gap-4 w-full px-6">
+<button class="bg-primary-container text-on-primary-container py-4 rounded-xl font-headline-sm text-headline-sm shadow-lg shadow-primary-container/20 active:scale-95 transition-transform">
+                    ENTER GALLERY
+                </button>
+<button class="glass-edge bg-white/5 backdrop-blur-md text-on-surface py-4 rounded-xl font-headline-sm text-headline-sm active:scale-95 transition-transform">
+                    LATEST PROJECTS
+                </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+<span class="font-label-md text-label-md tracking-widest text-on-surface">SCROLL</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- The Vision Section -->
+<section class="py-stack-lg px-margin-mobile bg-surface relative z-20">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col gap-stack-md">
+<div class="space-y-4">
+<span class="font-label-md text-label-md text-primary tracking-[0.2em] uppercase">The Vision</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Crafting Immersive Digital Experiences</h2>
+</div>
+<div class="w-full aspect-[3/4] rounded-2xl overflow-hidden glass-edge">
+<img alt="Vision Image" class="w-full h-full object-cover grayscale contrast-125" data-alt="A high-contrast, vertical architectural photograph showing minimalist concrete structures intertwined with dark shadows and emerald lighting accents. The image evokes a sense of structured luxury and modern design precision. The composition is artistic and dramatic, reflecting the expertise of a visual communication designer in a professional gallery context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2T3AkojR2cCxbIw4pLbloTIvBPPWycPIZaY2CGIkb_Cl_zx1J1kAcSVPCbgZMeiH7bEGY2fNbDeJ56jBGHbSid6uOEucxTJh20_-l3Di42TbPuaIMpeeCpIQI9EWHpQth2EWtCk9JSrz3XxuZGOvNIxHwmgFtt5eBpB179iGWz1Si3FNjt60hjf5HSTgK6tnhU0CE9t_fcnbzBSLgeUsn2f0RVQ4t2xeHKgbiQ50a5updI-OWQWgu23crrWN2admBkiz9bbGtZ34"/>
+</div>
+<div class="grid grid-cols-1 gap-gutter">
+<!-- Expertise Card 1 -->
+<div class="glass-edge p-stack-sm rounded-xl bg-surface-container-highest/30 backdrop-blur-xl flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="lens">lens</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-1">Lenswork</h3>
+<p class="font-body-md text-on-surface-variant">Capturing the soul of high-end brands through a cinematic eye.</p>
+</div>
+</div>
+<!-- Expertise Card 2 -->
+<div class="glass-edge p-stack-sm rounded-xl bg-surface-container-highest/30 backdrop-blur-xl flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-1">Identity</h3>
+<p class="font-body-md text-on-surface-variant">Architecting visual systems that resonate with global prestige.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-md border-t border-outline-variant/10 bg-transparent relative z-20">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-col items-center gap-8">
+<div class="font-label-md text-label-md uppercase tracking-widest text-on-surface">Nasasiira Patrick</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Dribbble</a>
+</div>
+<div class="text-secondary font-body-md text-body-md text-center opacity-80">
+                © 2024 Nasasiira Patrick. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- Mobile Navigation Drawer (Hidden by default, triggered by menu) -->
+<div class="fixed inset-0 z-[60] bg-black/40 backdrop-blur-md hidden" id="drawer">
+<div class="h-full w-80 rounded-r-xl border-r border-outline-variant/20 bg-surface/95 backdrop-blur-3xl shadow-2xl flex flex-col p-8 gap-stack-sm">
+<div class="flex flex-col mb-8">
+<div class="w-16 h-16 rounded-xl overflow-hidden mb-4 border border-outline-variant/20">
+<img alt="Nasasiira Patrick" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhgnyWI8FLPAsNQ3aJG6-37_k_e3E3SxHLbG4Qo73Xh3y-FYHnyZRPdv9nUUM7GVmRnBvKHXbDx96_MruCqK3AtDiOctSi54ayh8MjXJRll0CuSxFGULN5N0ljrCyjFqHkOPGzqc39mvG9nwcEzB0KA9eKz9fDnvv92tt_W7VI5BGNlCuYGuC280P4EM8J5j9H-me7_16x5eFoYlE4fz8av18sb-y8NlHgHUM3Zq-Jn6yZIflfLQ8zJliMGXA0wZlJffG-Vkuqnyo"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-black text-on-surface">Nasasiira Patrick</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Visual Designer</p>
+<p class="font-caption text-primary mt-1">Kampala, UG</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-body-lg">Work</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body-lg">About</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="design_services">design_services</span>
+<span class="font-body-lg">Services</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-body-lg">Contact</span>
+</a>
+</nav>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NASASIIRA | Video Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#1e3f39",
+                    "on-secondary-fixed-variant": "#4f4536",
+                    "secondary-fixed": "#f0e0cb",
+                    "tertiary-fixed-dim": "#cac6be",
+                    "on-primary-container": "#90d6c7",
+                    "tertiary-fixed": "#e7e2d9",
+                    "on-surface-variant": "#bec9c5",
+                    "surface-container": "#012520",
+                    "on-primary": "#003730",
+                    "outline-variant": "#3f4946",
+                    "background": "#001713",
+                    "surface-variant": "#1a3a35",
+                    "secondary-fixed-dim": "#d3c4b0",
+                    "on-error": "#690005",
+                    "inverse-surface": "#c6eae2",
+                    "tertiary": "#cac6be",
+                    "tertiary-container": "#56544d",
+                    "surface": "#001713",
+                    "primary": "#8ed4c4",
+                    "on-tertiary-container": "#cdc8c0",
+                    "secondary-container": "#524838",
+                    "secondary": "#d3c4b0",
+                    "surface-container-lowest": "#00110e",
+                    "inverse-primary": "#1f695d",
+                    "surface-container-low": "#00201c",
+                    "surface-dim": "#001713",
+                    "on-surface": "#c6eae2",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#89938f",
+                    "primary-container": "#0f5f53",
+                    "surface-tint": "#8ed4c4",
+                    "surface-container-highest": "#1a3a35",
+                    "inverse-on-surface": "#153630",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#32302b",
+                    "primary-fixed": "#a9f0e0",
+                    "on-secondary-container": "#c5b6a2",
+                    "on-background": "#c6eae2",
+                    "surface-container-high": "#0d2f2a",
+                    "on-primary-fixed-variant": "#005046",
+                    "on-secondary-fixed": "#221a0d",
+                    "on-tertiary-fixed-variant": "#494740",
+                    "on-secondary": "#382f21",
+                    "primary-fixed-dim": "#8ed4c4",
+                    "on-primary-fixed": "#00201b",
+                    "on-tertiary-fixed": "#1d1c16",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-md-mobile": ["Bodoni Moda"],
+                    "headline-md": ["Bodoni Moda"],
+                    "accent-italic": ["EB Garamond"],
+                    "display-lg": ["Bodoni Moda"],
+                    "display-lg-mobile": ["Bodoni Moda"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "400"}],
+                    "headline-md": ["42px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "accent-italic": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "display-lg": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(8, 43, 38, 0.6);
+            backdrop-filter: blur(40px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .lens-effect {
+            background: radial-gradient(circle at center, rgba(142, 212, 196, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-margin-mobile md:top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/20 bg-surface-variant/60 backdrop-blur-xl shadow-2xl z-50 flex justify-between items-center px-gutter py-4">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-widest leading-none">NASASIIRA</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Exhibitions</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-lg text-body-lg transition-all duration-500 hover:scale-105" href="#">Archive</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Studio</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">About</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps uppercase tracking-widest text-label-caps hover:scale-105 active:scale-95 transition-all duration-200">
+            Connect
+        </button>
+</header>
+<!-- Background Lens -->
+<div class="fixed inset-0 lens-effect z-0"></div>
+<main class="relative z-10 pt-[200px]">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="max-w-3xl">
+<span class="font-accent-italic text-accent-italic text-primary block mb-4 italic">The Moving Image Archive</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Cinematic <br/>Narratives</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant/80 leading-relaxed max-w-xl">
+                    A curated collection of visual documentaries and short films exploring the intersection of modern technology and traditional African aesthetics. Inspired by the meticulous macro-details of Levon Biss.
+                </p>
+</div>
+</section>
+<!-- Bento Grid Archive -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Featured Video -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="glass-card rounded-3xl overflow-hidden p-4 h-full flex flex-col">
+<div class="relative overflow-hidden rounded-2xl aspect-video">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A cinematic, high-detail wide shot of a futuristic African landscape under a deep emerald green twilight sky. Minimalist architectural structures with glowing outlines stand amidst lush, silhouetted foliage. The scene is illuminated with a soft, ethereal glow, creating a sophisticated and technologically advanced atmosphere with deep forest greens and creamy white highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZqAzDgRo2DDvGNVz70dbavq59EjzVC7QrXpmi-ZexJoISdHBVAiDFCg8DkwglvDOEg1WFTeyAgnkvJYplo219XK1hjqtS6e4imLSKTwoZSJuWAg3CYkKq-uxj-eWztZ29YZIimeRlBx80ZTdRJSlvi71_GiLWeuHYyrbYH0dhDdJDoxwDJuNjFBIs0LP62uR2slqUlg1kV1Mv4-2vtmR52z1SI6K37tA0itYIonHVWkIH5mNTkWFWpOhDXKyg0Bbyo1FCw8PXiaY"/>
+<div class="absolute inset-0 bg-background/20 group-hover:bg-background/0 transition-colors duration-500"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-on-primary text-4xl" data-weight="fill">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 flex gap-2">
+<span class="bg-surface-variant/80 backdrop-blur-md text-on-surface px-4 py-1 rounded-full font-label-caps text-label-caps">DOCUMENTARY</span>
+<span class="bg-primary/20 backdrop-blur-md text-primary px-4 py-1 rounded-full font-label-caps text-label-caps">4K RESOLUTION</span>
+</div>
+</div>
+<div class="pt-6 px-2">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Ancestral Echoes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">Exploring the rhythmic architecture of East African landscapes through a high-speed lens, capturing details often missed by the human eye.</p>
+</div>
+</div>
+</div>
+<!-- Secondary Video -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="glass-card rounded-3xl overflow-hidden p-4 h-full flex flex-col">
+<div class="relative overflow-hidden rounded-2xl aspect-square mb-6">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A high-contrast, macro close-up of an organic texture, resembling iridescent beetle wings with emerald green and deep black patterns. The lighting is dramatic and editorial, emphasizing the intricate micro-details and reflections as if viewed through a professional specimen lens. The aesthetic is futuristic and luxurious, blending natural complexity with modern cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUWtnfvQddYnbX-7DADSJEq2ugoVu4Qan5Y4gGHzG8UzAKfDe6iHl8BDbgVgZS5IUWrnUDAj0Iwy4vNv4b7iprw6adlSP8Lsu55fE3usUD-JioqKLHsT1cMqG44ZThzue3azYIPptv7MZNVzby6DUJquN-DQqUIpJTdYx1sgqVahD8op5ZihlsUtKR2cJxQNEtoLvEC2dO_LLOzMng7oZkyNOcRKEcnAmVL2OawG7t8lgoXa4ukL7YNNZYN_UZ0VNAzqvnh-ZDl08"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<div class="w-16 h-16 bg-white/20 rounded-full border border-white/40 flex items-center justify-center backdrop-blur-xl">
+<span class="material-symbols-outlined text-white text-3xl">play_circle</span>
+</div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-primary mb-2">MACRO SERIES</span>
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface mb-2">The Prism Effect</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A visual study of light refraction across natural organic surfaces, shot at 1000fps.</p>
+</div>
+</div>
+<!-- Horizontal Video -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="glass-card rounded-3xl overflow-hidden p-4 h-full flex flex-col">
+<div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A minimalist, cinematic interior scene featuring a single translucent glass sculpture illuminated by a soft emerald green spotlight from above. The surrounding environment is dark and cavernous, with subtle fog and deep forest green tones. The atmosphere is quiet, reverent, and sophisticated, emphasizing the purity of light and the sleekness of modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQG-EO5ss0Hn9zrtmU1z7QW0ZGAuZqzl2jMPJCS46Yh_6Dcyr_ELQXkDt6_ubW3_gBwdz-A1Nsy2JQIQQhQCTTbprNLMQ_3BoSWYPkBaCvs2sELVP74ztG66cp59YfhJzZhg1Q7AKO_am1CwL0Rakl8q8KklpoxDL6NhOw-4dFu8QgJV2c_vCWvMmuUJXNbbhfPO0DnGw-mOx8CPR5qGVO6ePW3aiOzi2SeKgbec53jzAto2CjJQR3aonzOHIBj_wpiPHcvBu6uyM"/>
+</div>
+<span class="font-label-caps text-label-caps text-primary mb-2">STUDIO ARCHIVE</span>
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface">Light &amp; Form</h3>
+</div>
+</div>
+<!-- Vertical Style Video -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="glass-card rounded-3xl overflow-hidden p-4 h-full flex flex-row gap-6">
+<div class="relative overflow-hidden rounded-2xl w-1/2 h-full min-h-[300px]">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="An abstract digital composition showcasing flowing, silk-like ribbons in deep forest green and vibrant emerald shades. The ribbons curve gracefully through a dark void, catching soft light reflections along their edges. The style is fluid and futuristic, with a luxurious, cinematic quality that feels multi-dimensional and serene, using the brand's signature high-contrast dark palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAc47J1JwhxSR7S4KhEsSxIcbGnQCSBV6riLAhUFGXLCAtthWwwaeQHgm3dGRvA7Im-LFdT3K17LDJbdsF43LPxTdOuc0UmK1Q_dfovSHybdAF3Fm97ecK125Aq3GEnI35B7ChjTSWh_xd22RGYGYbSX9bYqvavoI0aTg8BqF9GgsyMMhThzG41khlhiAbmzTJuCBEMZkaRpW0d9qLYGtQC6s9N8BgfihkohmEtQPmUH6uE4Z_UsE3GKojI16tET50V5ZemrhsV84"/>
+<div class="absolute top-4 right-4">
+<span class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-lg">videocam</span>
+</span>
+</div>
+</div>
+<div class="w-1/2 flex flex-col justify-center pr-4">
+<span class="font-accent-italic text-accent-italic text-on-surface-variant italic mb-4">Volume IV</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 leading-tight">Digital Topographies</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">A meditative journey through generated landscapes, exploring the boundary between the artificial and the organic.</p>
+<div class="flex items-center gap-2 group/btn">
+<span class="font-label-caps text-label-caps text-primary group-hover/btn:mr-2 transition-all">VIEW PROJECT</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Archive Signup -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="glass-card rounded-[40px] p-12 md:p-24 text-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Access the Full <br/>Collection</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">Join our private list to receive exclusive early access to new cinematic exhibitions and behind-the-scenes archival footage.</p>
+<form class="max-w-md mx-auto relative">
+<input class="w-full bg-transparent border-b border-outline-variant/30 py-4 font-label-caps text-label-caps text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary" type="submit">
+<span class="material-symbols-outlined text-3xl">arrow_forward</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-8 border-t border-outline-variant/30 bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest">NASASIIRA</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm text-center md:text-left">
+                    © 2024 Nasasiira Patrick. All rights reserved. Built for the future of African design.
+                </p>
+</div>
+<div class="flex gap-8 mt-8 md:mt-0">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Instagram</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">LinkedIn</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Behance</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

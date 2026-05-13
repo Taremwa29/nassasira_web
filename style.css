@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+    --primary: #8ed4c4;
+    --background: #14130e;
+    --surface: #14130e;
+    --on-surface: #e7e2d9;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    color: var(--on-surface);
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass-edge, .glass-card, .glass-panel {
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(231, 226, 217, 0.15);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Effects */
+.noise-grain {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCKuX43yWLg6UPhkqpElJk_ajq7vPQa3RSYBymOADbmTHHx3AWTx8M8Uo-GdSCsOWM_-sHwdAHFNHLpxEkq9X2HuZdsLKE2MRMWCHw57W49Qc2ioZ2vCQGKQD_rd-CejocfPpqMx7R1pSGkXcdIv4meKglEXC_jr8dE49RXwVAq0vnFCGrUfKw_TblBqX7HVAEb47ogTGJ6jW_Rl5_4HnS6Ds0C-NlbvGiOAtORSVsBfgLUclj0Go_e_Mcw4XzJn6OuBFDd3hAanas);
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.hero-gradient-overlay {
+    background: radial-gradient(circle at top left, rgba(15, 95, 83, 0.15) 0%, transparent 50%), 
+                radial-gradient(circle at bottom right, rgba(15, 95, 83, 0.1) 0%, transparent 50%);
+}
+
+.hero-gradient {
+    background: radial-gradient(circle at 0% 0%, #0F5F53 0%, transparent 40%),
+                radial-gradient(circle at 100% 100%, #082B26 0%, #14130e 100%);
+}
+
+.text-glow {
+    text-shadow: 0 0 15px rgba(142, 212, 196, 0.4);
+}
+
+/* Masonry Layout Helper */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 32px;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&amp;family=EB+Garamond:ital@1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#1e3f39",
+                    "on-secondary-fixed-variant": "#4f4536",
+                    "secondary-fixed": "#f0e0cb",
+                    "tertiary-fixed-dim": "#cac6be",
+                    "on-primary-container": "#90d6c7",
+                    "tertiary-fixed": "#e7e2d9",
+                    "on-surface-variant": "#bec9c5",
+                    "surface-container": "#012520",
+                    "on-primary": "#003730",
+                    "outline-variant": "#3f4946",
+                    "background": "#001713",
+                    "surface-variant": "#1a3a35",
+                    "secondary-fixed-dim": "#d3c4b0",
+                    "on-error": "#690005",
+                    "inverse-surface": "#c6eae2",
+                    "tertiary": "#cac6be",
+                    "tertiary-container": "#56544d",
+                    "surface": "#001713",
+                    "primary": "#8ed4c4",
+                    "on-tertiary-container": "#cdc8c0",
+                    "secondary-container": "#524838",
+                    "secondary": "#d3c4b0",
+                    "surface-container-lowest": "#00110e",
+                    "inverse-primary": "#1f695d",
+                    "surface-container-low": "#00201c",
+                    "surface-dim": "#001713",
+                    "on-surface": "#c6eae2",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#89938f",
+                    "primary-container": "#0f5f53",
+                    "surface-tint": "#8ed4c4",
+                    "surface-container-highest": "#1a3a35",
+                    "inverse-on-surface": "#153630",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#32302b",
+                    "primary-fixed": "#a9f0e0",
+                    "on-secondary-container": "#c5b6a2",
+                    "on-background": "#c6eae2",
+                    "surface-container-high": "#0d2f2a",
+                    "on-primary-fixed-variant": "#005046",
+                    "on-secondary-fixed": "#221a0d",
+                    "on-tertiary-fixed-variant": "#494740",
+                    "on-secondary": "#382f21",
+                    "primary-fixed-dim": "#8ed4c4",
+                    "on-primary-fixed": "#00201b",
+                    "on-tertiary-fixed": "#1d1c16",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "headline-md-mobile": ["Bodoni Moda"],
+                    "headline-md": ["Bodoni Moda"],
+                    "accent-italic": ["EB Garamond"],
+                    "display-lg": ["Bodoni Moda"],
+                    "display-lg-mobile": ["Bodoni Moda"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "400"}],
+                    "headline-md": ["42px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "accent-italic": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "display-lg": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(8, 43, 38, 0.6);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(198, 234, 226, 0.1);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+        }
+        .lens-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(15, 95, 83, 0.3) 0%, rgba(15, 95, 83, 0) 70%);
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(80px);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(142, 212, 196, 0.4);
+            background: rgba(8, 43, 38, 0.8);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: #8ed4c4 !important;
+            box-shadow: 0 4px 12px -4px rgba(142, 212, 196, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<div class="lens-glow left-1/4 top-1/4"></div>
+<div class="lens-glow right-1/4 bottom-1/4"></div>
+<header class="fixed top-margin-mobile md:top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/20 bg-surface-variant/60 backdrop-blur-xl shadow-2xl flex justify-between items-center px-gutter py-4 z-50">
+<div class="font-display-lg text-[24px] md:text-[32px] text-primary uppercase tracking-widest">NASASIIRA</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Exhibitions</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Archive</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Studio</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-500 hover:scale-105" href="#">About</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps hover:scale-105 active:scale-95 duration-200">Connect</button>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-[200px] pb-section-gap">
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5 space-y-12">
+<div class="space-y-4">
+<span class="font-label-caps text-primary tracking-[0.3em] uppercase">Get In Touch</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">Let's create the <span class="font-accent-italic text-primary italic font-normal">future</span> together.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-md">Currently accepting select commissions for high-end digital experiences and visual identities across the continent.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-panel glass-card-hover p-6 rounded-xl transition-all duration-500 cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform" data-icon="chat_bubble">chat_bubble</span>
+<h3 class="font-label-caps text-on-surface">WhatsApp</h3>
+<p class="font-body-sm text-on-surface-variant mt-1">+256 700 000 000</p>
+</div>
+<div class="glass-panel glass-card-hover p-6 rounded-xl transition-all duration-500 cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform" data-icon="alternate_email">alternate_email</span>
+<h3 class="font-label-caps text-on-surface">Instagram</h3>
+<p class="font-body-sm text-on-surface-variant mt-1">@nasasiira_studio</p>
+</div>
+<div class="glass-panel glass-card-hover p-6 rounded-xl transition-all duration-500 cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform" data-icon="motion_photos_on">motion_photos_on</span>
+<h3 class="font-label-caps text-on-surface">TikTok</h3>
+<p class="font-body-sm text-on-surface-variant mt-1">@nasasiira.vis</p>
+</div>
+<div class="glass-panel glass-card-hover p-6 rounded-xl transition-all duration-500 cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform" data-icon="mail">mail</span>
+<h3 class="font-label-caps text-on-surface">Email</h3>
+<p class="font-body-sm text-on-surface-variant mt-1">hello@nasasiira.com</p>
+</div>
+</div>
+<div class="relative h-[300px] rounded-2xl overflow-hidden glass-panel group">
+<img alt="Studio Atmosphere" class="w-full h-full object-cover opacity-50 grayscale group-hover:scale-110 transition-transform duration-1000" data-alt="A cinematic, low-light photograph of a high-end design studio with deep emerald green architectural lighting. The scene features minimalist workstations with glowing monitors, large tropical plants casting soft organic shadows, and glass partitions reflecting the sophisticated technological environment. The atmosphere is quiet, professional, and futuristic, following a premium African-modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3u6onHVQEMIHk_jh8yZ1_PMCV2eHIpCFAHdpvgUjcOPT7Bl84mV5Ymikp-75f86BfNZCP1Hwdj-TaMZstifONud1VE4IBxY9_8mLeDc4u0i2sfb33PJd_P5WLDmWGEJd-poM9zZl0gkRoUDDSNLVRvyfJW6JYTQyk5wfxXTXrDTyFzYQ_bsKEsGti8Bi212rbo0CR94fABOyPy9EitLka07X0EbgW-qExhzRhiAFejCf2DHXlCIlX7iQJ-WS228zPcSm32FMZBfM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-accent-italic text-primary">Based in Kampala, Uganda</p>
+<p class="font-label-caps text-on-surface-variant">Serving clients globally</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<form action="#" class="space-y-10 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-on-surface-variant/60" for="name">Full Name</label>
+<input class="bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body-lg text-on-surface placeholder:text-on-surface-variant/20 focus:ring-0 transition-colors" id="name" placeholder="Patrick Nasasiira" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-on-surface-variant/60" for="email">Email Address</label>
+<input class="bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body-lg text-on-surface placeholder:text-on-surface-variant/20 focus:ring-0 transition-colors" id="email" placeholder="patrick@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-on-surface-variant/60" for="service">Service Interest</label>
+<select class="bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body-lg text-on-surface focus:ring-0 transition-colors appearance-none" id="service">
+<option class="bg-surface-container">Visual Identity</option>
+<option class="bg-surface-container">UI/UX Design</option>
+<option class="bg-surface-container">Motion Graphics</option>
+<option class="bg-surface-container">Exhibition Design</option>
+</select>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-on-surface-variant/60" for="budget">Budget Range</label>
+<select class="bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body-lg text-on-surface focus:ring-0 transition-colors appearance-none" id="budget">
+<option class="bg-surface-container">$5,000 - $10,000</option>
+<option class="bg-surface-container">$10,000 - $25,000</option>
+<option class="bg-surface-container">$25,000+</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-on-surface-variant/60" for="message">Project Brief</label>
+<textarea class="bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body-lg text-on-surface placeholder:text-on-surface-variant/20 focus:ring-0 transition-colors resize-none" id="message" placeholder="Tell me about your vision..." rows="5"></textarea>
+</div>
+<div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="font-body-sm text-on-surface-variant">Response time: &lt; 24 hours</span>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-5 rounded-full font-label-caps flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all duration-300 group shadow-[0_0_20px_rgba(142,212,196,0.3)]" type="submit">
+                                Initiate Project
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full pt-section-gap pb-8 border-t border-outline-variant/30 bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-headline-md text-headline-md text-on-surface">NASASIIRA</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© 2024 Nasasiira Patrick. All rights reserved. Built for the future of African design.</p>
+</div>
+<div class="flex gap-8 mt-8 md:mt-0">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

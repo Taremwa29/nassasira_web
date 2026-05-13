@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&amp;family=EB+Garamond:ital@1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(26, 58, 53, 0.6);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+        }
+        .lens-effect {
+            background: radial-gradient(circle at center, #1f695d 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(142, 212, 196, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "surface-bright": "#1e3f39",
+                "on-secondary-fixed-variant": "#4f4536",
+                "secondary-fixed": "#f0e0cb",
+                "tertiary-fixed-dim": "#cac6be",
+                "on-primary-container": "#90d6c7",
+                "tertiary-fixed": "#e7e2d9",
+                "on-surface-variant": "#bec9c5",
+                "surface-container": "#012520",
+                "on-primary": "#003730",
+                "outline-variant": "#3f4946",
+                "background": "#001713",
+                "surface-variant": "#1a3a35",
+                "secondary-fixed-dim": "#d3c4b0",
+                "on-error": "#690005",
+                "inverse-surface": "#c6eae2",
+                "tertiary": "#cac6be",
+                "tertiary-container": "#56544d",
+                "surface": "#001713",
+                "primary": "#8ed4c4",
+                "on-tertiary-container": "#cdc8c0",
+                "secondary-container": "#524838",
+                "secondary": "#d3c4b0",
+                "surface-container-lowest": "#00110e",
+                "inverse-primary": "#1f695d",
+                "surface-container-low": "#00201c",
+                "surface-dim": "#001713",
+                "on-surface": "#c6eae2",
+                "on-error-container": "#ffdad6",
+                "outline": "#89938f",
+                "primary-container": "#0f5f53",
+                "surface-tint": "#8ed4c4",
+                "surface-container-highest": "#1a3a35",
+                "inverse-on-surface": "#153630",
+                "error": "#ffb4ab",
+                "on-tertiary": "#32302b",
+                "primary-fixed": "#a9f0e0",
+                "on-secondary-container": "#c5b6a2",
+                "on-background": "#c6eae2",
+                "surface-container-high": "#0d2f2a",
+                "on-primary-fixed-variant": "#005046",
+                "on-secondary-fixed": "#221a0d",
+                "on-tertiary-fixed-variant": "#494740",
+                "on-secondary": "#382f21",
+                "primary-fixed-dim": "#8ed4c4",
+                "on-primary-fixed": "#00201b",
+                "on-tertiary-fixed": "#1d1c16",
+                "error-container": "#93000a"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "margin-mobile": "24px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-desktop": "80px",
+                "container-max": "1440px",
+                "section-gap": "160px"
+              },
+              "fontFamily": {
+                "body-sm": ["Inter"],
+                "label-caps": ["Inter"],
+                "headline-md-mobile": ["Bodoni Moda"],
+                "headline-md": ["Bodoni Moda"],
+                "accent-italic": ["EB Garamond"],
+                "display-lg": ["Bodoni Moda"],
+                "display-lg-mobile": ["Bodoni Moda"],
+                "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "headline-md-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "400"}],
+                "headline-md": ["42px", {"lineHeight": "48px", "fontWeight": "400"}],
+                "accent-italic": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "display-lg": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+<!-- The Lens Background Element -->
+<div class="fixed top-1/4 left-1/4 w-[600px] h-[600px] lens-effect rounded-full z-0"></div>
+<div class="fixed bottom-1/4 right-1/4 w-[500px] h-[500px] lens-effect rounded-full z-0"></div>
+<!-- Header / TopAppBar -->
+<nav class="fixed top-margin-mobile md:top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/20 bg-surface-variant/60 backdrop-blur-xl shadow-2xl flex justify-between items-center px-gutter py-4 z-50">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-widest leading-none">NASASIIRA</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Exhibitions</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Archive</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Studio</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">About</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 active:scale-95 duration-200">Connect</button>
+</nav>
+<main class="relative z-10 pt-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section for Contact -->
+<header class="mb-section-gap text-center md:text-left">
+<span class="font-accent-italic text-accent-italic text-primary block mb-4">Available for Global Commissions</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8 max-w-4xl">Let's manifest a new <span class="text-primary">visual reality</span>.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl opacity-80 leading-relaxed">Whether it’s a high-end brand exhibition or a futuristic digital architecture, your vision deserves the precision of African-modern aesthetics.</p>
+</header>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-section-gap">
+<!-- Contact Cards Cluster (The Bento Approach) -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<!-- Card: Email -->
+<div class="glass-card col-span-2 p-8 rounded-xl flex flex-col justify-between h-[220px] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 group">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-primary-container/20 rounded-lg text-primary group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<span class="font-label-caps text-label-caps opacity-40">Primary</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface mb-1">Direct</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">hello@nasasiira.studio</p>
+</div>
+</div>
+<!-- Card: WhatsApp -->
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-[180px] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 group">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary w-fit group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<h3 class="font-body-lg font-bold text-on-surface">WhatsApp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">Instant Connect</p>
+</div>
+</div>
+<!-- Card: Instagram -->
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-[180px] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 group">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary w-fit group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<div>
+<h3 class="font-body-lg font-bold text-on-surface">Instagram</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">@nasasiira_p</p>
+</div>
+</div>
+<!-- Card: TikTok -->
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-[180px] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 group">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary w-fit group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined">movie</span>
+</div>
+<div>
+<h3 class="font-body-lg font-bold text-on-surface">TikTok</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">Behind the Lens</p>
+</div>
+</div>
+<!-- Card: LinkedIn -->
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-[180px] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 group">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary w-fit group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div>
+<h3 class="font-body-lg font-bold text-on-surface">LinkedIn</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">Professional Profile</p>
+</div>
+</div>
+</div>
+<!-- Booking/Contact Form Section -->
+<div class="lg:col-span-7 glass-card p-10 md:p-16 rounded-2xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Studio Inquiries</h2>
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="group">
+<label class="font-label-caps text-label-caps text-primary/60 mb-2 block transition-colors group-focus-within:text-primary">Identity</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-4 text-body-lg font-body-lg text-on-surface transition-all focus:border-primary" placeholder="Your Name" type="text"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps text-primary/60 mb-2 block transition-colors group-focus-within:text-primary">Electronic Mail</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-4 text-body-lg font-body-lg text-on-surface transition-all focus:border-primary" placeholder="email@address.com" type="email"/>
+</div>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps text-primary/60 mb-2 block transition-colors group-focus-within:text-primary">Inquiry Subject</label>
+<select class="w-full bg-transparent border-b border-outline-variant py-4 text-body-lg font-body-lg text-on-surface transition-all focus:border-primary appearance-none cursor-pointer">
+<option class="bg-surface-container">Brand Design Commission</option>
+<option class="bg-surface-container">Exhibition Collaboration</option>
+<option class="bg-surface-container">Digital Strategy Consultation</option>
+<option class="bg-surface-container">Other</option>
+</select>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps text-primary/60 mb-2 block transition-colors group-focus-within:text-primary">Manifestation Details</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant py-4 text-body-lg font-body-lg text-on-surface transition-all focus:border-primary resize-none" placeholder="Describe your vision and project scope..." rows="4"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-8">
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60 max-w-xs">By sending this, you agree to our collaborative process and terms of engagement.</p>
+<button class="w-full md:w-auto bg-primary text-on-primary font-bold px-12 py-5 rounded-full flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+                                Send Manifest
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Abstract Decorative Image in Card -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover rounded-full" data-alt="A sophisticated close-up of a digital glass installation with intricate light refractions and deep emerald green glows. The style is hyper-modern and minimalist, reflecting a futuristic African aesthetic. The lighting is moody and cinematic, highlighting the layered translucency and sharp, clean edges of the glass architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXu1k9I9LYHBX0cRVSBdgYLCaK6VtO1oBNy6c1ay63Ah4Rl553d5gnIMGOTibDQAHmCL5-7X7tnBfyNBSIvRvARoIygFhDqme0LHFd8vrF_0yVU-yc0X_5cMGu7nNBvDzYmUbVI8uSO6ITYbzXMZ0EaDyenUnLSCXtew_37vLj-Ox1QgMECCV623PUWdpZsLFCW6hdw8v59wZe22jPPgH89GNHvUEidwUbmjBSRSKMpkHr-284a3L8A0DWDzbPvyEWutZEs-2R7Y8"/>
+</div>
+</div>
+</section>
+<!-- Location/Map Placeholder -->
+<section class="mb-section-gap">
+<div class="glass-card w-full h-[400px] rounded-3xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
+<img class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 duration-700 transition-all" data-alt="A cinematic, high-contrast aerial map view of a modern cityscape at night, rendered in a stylized palette of deep forest greens and glowing emerald accents. The lights of the city streets form glowing organic patterns against the dark terrain, emphasizing a high-tech, futuristic design aesthetic that feels both digital and rooted." data-location="Kampala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8YSI6XpBefjZ4yijPT6B8JFlXCYaBZNGisZO3e8X8w03OoZIWc5V4J4Vw29l7U8yDwpm9OPe9dpvXrkVr-0FMrKqMtzAdBNvOhkkfaoqu0uXRi2QjvXxeC8M_bzt4G7W_sxb9JZR3icAzPW9jqRM8y8Q9hWZxk_NWxOZG-GAK-6SvU_y2p7PPU1ggKu1gd1pqAryuAaJifZ6Tnu5-d5hnUuTE3uzSukulEpcjQBPWtnvk4rgvJzDzn9nI40Rmsq2NH97otdoVSr8"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="glass-card px-8 py-4 rounded-full flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-weight="fill">location_on</span>
+<span class="font-headline-md text-headline-md-mobile text-on-surface">Based in Kampala, UG</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-8 bg-background border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit">
+<div class="font-headline-md text-headline-md text-on-surface mb-4 md:mb-0">NASASIIRA</div>
+<div class="flex gap-8 mb-4 md:mb-0">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Behance</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Email</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">© 2024 Nasasiira Patrick. All rights reserved. Built for the future of African design.</p>
+</div>
+</footer>
+</body></html>

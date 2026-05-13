@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#36352f",
+            "on-surface": "#e7e2d9",
+            "on-error-container": "#ffdad6",
+            "error-container": "#93000a",
+            "on-secondary": "#153630",
+            "inverse-surface": "#e7e2d9",
+            "surface-container-highest": "#36352f",
+            "on-primary-container": "#90d6c7",
+            "secondary-container": "#2c4d47",
+            "surface-container-high": "#2b2a24",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed-variant": "#4f4536",
+            "surface": "#14130e",
+            "primary-fixed-dim": "#8ed4c4",
+            "surface-container-low": "#1d1c16",
+            "on-primary-fixed-variant": "#005046",
+            "tertiary": "#d3c4b0",
+            "surface-bright": "#3b3933",
+            "background": "#14130e",
+            "on-background": "#e7e2d9",
+            "primary-container": "#0f5f53",
+            "primary": "#8ed4c4",
+            "outline-variant": "rgba(63, 73, 70, 0.2)",
+            "on-surface-variant": "#bec9c5",
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-desktop": "64px",
+            "stack-sm": "16px",
+            "container-max": "1280px",
+            "unit": "8px",
+            "gutter": "24px",
+            "stack-md": "32px",
+            "stack-lg": "80px",
+            "margin-mobile": "20px"
+          },
+          "fontFamily": {
+            "headline-md": ["Montserrat"],
+            "headline-sm": ["Montserrat"],
+            "body-md": ["Montserrat"],
+            "label-md": ["Montserrat"],
+            "display-lg": ["Montserrat"]
+          },
+          "fontSize": {
+            "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+            "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #082B26; /* Deep Forest Green as per Style Guidance */
+      background-image: radial-gradient(circle at top right, #0F5F53 0%, transparent 40%),
+                        radial-gradient(circle at bottom left, #0F5F53 0%, transparent 40%);
+      min-height: 100vh;
+    }
+    .glass-card {
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(231, 226, 217, 0.15); /* border_glass token mimic */
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-40px)] max-w-container-max rounded-full border border-outline-variant/20 bg-surface/60 backdrop-blur-2xl text-primary flex justify-between items-center px-6 py-3 z-50 shadow-xl shadow-background/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">menu</span>
+<h1 class="font-headline-sm text-headline-sm font-bold tracking-tighter text-on-surface">Nasasiira Patrick</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="Nasasiira Patrick Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcjhjLaQj1zFGNHqBtUmANzdmE2zmgq_Jwop4A9QlA3ovDYXuybPceE8FmTTk3tDL-Ek95NoEMO7Ay1rhTmtQZvmH6SZxfmduWdzVP0LPhkUUvXd_Bk5_oPl4P3ip_xp5PEYtynvx3kQApyFGW5IoNVxPwFZkAS7qm-BlTTFDpUtF__-9cJng4GyszQbc1Df5T0htW5g_ZANAFV9BtDYe2jioo2ui4XVZYw1Pz0yZJ4tKhTV4V4ab7YFHw5KCl77T8_kvFcZ_hLhs"/>
+</div>
+</header>
+<main class="pt-32 pb-24 px-margin-mobile flex flex-col gap-stack-lg max-w-md mx-auto">
+<!-- Section Header -->
+<section class="space-y-stack-sm text-center">
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest">Curated Series</p>
+<h2 class="font-headline-md text-headline-md text-on-surface">Exhibitions</h2>
+<div class="w-12 h-1 bg-primary mx-auto rounded-full"></div>
+</section>
+<!-- Photography Exhibition Card -->
+<article class="glass-card bg-surface/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 active:scale-95">
+<div class="p-4">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A cinematic photography exhibition poster showcasing a dramatic high-contrast portrait in deep emerald and charcoal tones. The lighting is moody and directional, highlighting the texture of the subjects skin and the depth of the dark green background. Polished glass reflections dance across the frame, creating a sense of luxury and mystery consistent with a premium creative portfolio. The atmosphere is quiet, prestigious, and intensely focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-8S2cT2aXIbmWWYzQHMW9i2_ReYDifwjc0yqGKuSfZ99_t8FmhyS34agnv-z4ePjGLtX4n9o7wi2o4mZOPGfj1AyAcsETZKjBB9KQ9pY-aCzFdrvxh65LO0PxmcAEFVC4rhSAVYjB34B5X2ryR9nO4LoPHHatd-GChhn7YZTX6F3BYYpqJnKGS72MscUUnsDuo0r-eSgdqDt3eepp4iSf8Q0NCDowOqFtGduqNrdYeJpHgFAvRNEThb_z6u7GmV1GgNKjIp2brnE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="px-6 pb-8 pt-2 space-y-stack-sm">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-md text-label-md text-primary/80 block mb-1">01. Medium</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Photography</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Exploring the intersection of architectural light and human solitude through a lens of deep tonal greens and cinematic shadows.</p>
+<button class="w-full py-4 bg-primary-container text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+          View Gallery <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Print Production Exhibition Card -->
+<article class="glass-card bg-surface/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 active:scale-95">
+<div class="p-4">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close-up shot of high-end tactile print production featuring metallic foil stamping on thick dark forest green paper stock. The lighting catches the raised edges of the typography, creating a brilliant emerald glow against the matte background. The image evokes a sense of artisanal luxury and physical presence, emphasizing the premium quality of tactile design media within a cinematic and modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA_lq5z6gXGdbuBghhtrDCYdmBnp1IwWNmzb_TXpWHLHahleNhs-CpbJ_VmLrI9peqvcIpG2FvAfqtUTVyNGDf-0RVkGYR-gGUtvx-dcnuDwZfp3LdvcOs1BIZ9htwbxqxOQiNVppBpdtZV2usWq_OO2fHzSbDeya1Zzu9ZMdKCUl-faApN2XMa9QqvwcDt2NcHPTeJw4In8UccUTrNif9DUgDjckWkGO4RopHzWvHbYcq-GNAgS1Y8B4PyzLFLYRn-VwISi_jhGM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="px-6 pb-8 pt-2 space-y-stack-sm">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-md text-label-md text-primary/80 block mb-1">02. Medium</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Print Production</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">print</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">A tactile journey into high-end editorial design, featuring bespoke foiling, textured stock, and precision-engineered layouts.</p>
+<button class="w-full py-4 bg-primary-container text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+          View Gallery <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Web Media Exhibition Card -->
+<article class="glass-card bg-surface/30 rounded-xl overflow-hidden flex flex-col transition-all duration-300 active:scale-95">
+<div class="p-4">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated digital interface design displayed on a high-resolution screen within a dimly lit environment. The UI features glassmorphic elements, glowing emerald accents, and elegant typography that seems to float over a deep green background. The scene is illuminated by the soft luminance of the display, creating a futuristic yet luxurious mood that perfectly represents advanced web media and visual design expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsqn88QIl45_WxFwfyVmtpQXZlccgWpryRIJKwi5fhDRmN8sXvgnvP-4CTz6gxy14q917S4vf35lH9hp-mSkIbt43QuUpVv3DeQrPv7Obeat-4Yx1qzza_S-LOyh-D9puDxck-W_7jchx7XADmy2uxhhA3FlmVwEQpUqgc2-pGvRsjV4rJNjJg_AGOT-PXyprRHAz0dtSkQ2vjNzrLzzr6Gv25_lAvnFsAxDCasj0zPB78302PTUv0BkFWoFE_kFH5Z5NPIhvdo6Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="px-6 pb-8 pt-2 space-y-stack-sm">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-md text-label-md text-primary/80 block mb-1">03. Medium</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Web Media</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">language</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Immersive digital experiences that prioritize interaction design and atmospheric visual storytelling for the modern web.</p>
+<button class="w-full py-4 bg-primary-container text-on-surface font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+          View Gallery <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-md border-t border-outline-variant/10 bg-transparent">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-col items-center gap-4">
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface">Nasasiira Patrick</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Behance</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Dribbble</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center opacity-80 mt-4">© 2024 Nasasiira Patrick. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

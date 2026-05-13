@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="/src/css/style.css" rel="stylesheet"/>
+    <script src="/src/js/main.js" type="module"></script>
+    <title>Nasasiira Patrick | Cinematic Portfolio</title>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden" style="overflow: hidden;">
+<div id="loader">
+    <div class="loader-text">NASASIIRA</div>
+    <div class="loader-bar"></div>
+</div>
+<nav class="fixed top- margin-mobile md:top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/15 bg-surface-variant/60 backdrop-blur-xl shadow-2xl z-50 flex justify-between items-center px-gutter py-4 transition-all duration-500">
+<a class="font-display-lg text-[20px] md:text-headline-sm text-primary uppercase tracking-widest" href="index.html">
+            NASASIIRA
+        </a>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="about.html">About</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="works.html">Works</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="exhibitions.html">Exhibitions</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="videos.html">Videos</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block bg-primary-container text-on-primary px-6 py-2 rounded-full font-label-md hover:scale-105 active:scale-95 transition-all shadow-lg" href="contact.html">
+                Connect
+            </a>
+<button class="md:hidden text-primary p-2" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Drawer -->
+<div class="fixed inset-0 z-[60] bg-background/95 backdrop-blur-2xl transition-all duration-500 translate-x-full" id="mobile-drawer">
+<div class="flex flex-col h-full p-margin-mobile">
+<div class="flex justify-between items-center mb-stack-lg">
+<span class="font-display-lg text-headline-sm text-primary uppercase tracking-widest">NP</span>
+<button class="text-primary p-2" id="menu-close">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-stack-md mt-10">
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="works.html">Works</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="exhibitions.html">Exhibitions</a>
+<a class="text-display-lg-mobile text-on-surface hover:text-primary transition-colors" href="videos.html">Videos</a>
+<a class="text-display-lg-mobile text-primary mt-10" href="contact.html">Connect —</a>
+</div>
+<div class="mt-auto pb-10 flex gap-8">
+<a class="text-on-surface-variant" href="#">Instagram</a>
+<a class="text-on-surface-variant" href="#">LinkedIn</a>
+<a class="text-on-surface-variant" href="#">Behance</a>
+</div>
+</div>
+</div>
+<main class="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-background noise-grain"></div>
+<div class="absolute inset-0 hero-gradient-overlay"></div>
+<div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary-container/20 rounded-full blur-[100px]"></div>
+<div class="absolute inset-0 opacity-40 md:opacity-40">
+<img alt="Cinematic Background" class="w-full h-full object-cover grayscale brightness-50 md:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQWv2A8KLkTdCoFYLK60SucIS_g5sMSzoH-ROA7yFC7fbYxtyEiE4E5w45vHhT8qZkWDclDoyPZx8JkcRgRdDFh1zXcKKTwf7W4pSDoa_RRtZmE4-B2Hb_xZhJr1q817sx5PQvRIadriAr79EL33wqhWWA_-4y168AObwYvqO3ZWVdbFC4QGFvuyiEWudAPD9DC-XRkwOCj7glGvJ1t5AVmNclg05BrkXPiQML332IIXSKY8VS38sBVkoRqyWAwB2vybo9UyCtVX4">
+</div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<div class="inline-block mb-stack-sm bg-primary/10 border border-primary/20 rounded-full px-4 py-1 backdrop-blur-sm">
+<span class="font-label-md text-primary tracking-widest uppercase">Portfolio 2026</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-sm tracking-tighter">
+                NASASIIRA PATRICK
+            </h1>
+<p class="font-headline-sm text-headline-sm text-primary mb-stack-md max-w-3xl mx-auto">
+                Visual engineer • Photographer • Creative Director
+            </p>
+<div class="glass-edge bg-white/5 backdrop-blur-md p-8 rounded-xl max-w-2xl mx-auto border-white/10 shadow-2xl">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    “Documenting culture, emotion, memory, and visual identity.”
+                </p>
+</div>
+<div class="mt-stack-lg flex flex-col md:flex-row items-center justify-center gap-gutter">
+<a href="works.html" class="w-full md:w-auto bg-primary text-on-primary font-label-md py-4 px-10 rounded-full hover:shadow-[0_0_20px_rgba(142,212,196,0.4)] transition-all duration-300 text-center">
+                    View Showcase
+                </a>
+<a href="about.html" class="w-full md:w-auto glass-edge bg-white/5 font-label-md py-4 px-10 rounded-full text-on-surface hover:bg-white/10 transition-all duration-300 text-center">
+                    Read Manifesto
+                </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="font-caption uppercase tracking-[0.3em]">Explore</span>
+<span class="material-symbols-outlined text-primary animate-bounce">expand_more</span>
+</div>
+</main>
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end mb-stack-lg">
+<div class="md:col-span-8">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Curated Frames</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    A selection of visual stories captured through the lens of identity and heritage. Each project represents a deep dive into the intersection of culture and modern aesthetics.
+                </p>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<a class="group flex items-center gap-2 text-primary font-label-md" href="works.html">
+                    ALL PROJECTS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="group relative glass-edge bg-surface-container rounded-2xl overflow-hidden p-6 transition-all duration-500 hover:scale-[1.02]">
+<div class="aspect-[4/3] rounded-xl overflow-hidden relative mb-stack-md">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoLtGvi2tJ5wzJtj3z-StnIPz5XZJChB6XNaRDCLt_wkqXaE8fY0CPRfjB4c0LFVLcrCbWcWipEO3QprvqGHyQyOFgW_T7SNta0SPuLyjqnUnudLHRZ3ncjThBWL6S1LX5N_zn8bduMc38asrjomfJMWOz7mz5LIy_S4TkhGQZl2wM_sSVEADz40ltYfpwxJDLzL3dqYKPs8cyc4dCQ2sxoPl5SgSt8xVs7BR5oU99wZHU79uRhTdgwlmc8LYPIZKgTfPPnbzjT0Y">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="font-caption text-primary uppercase tracking-widest mb-2 block">Photography</span>
+<h3 class="font-headline-sm text-on-surface">The Soul</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">open_in_new</span>
+</div>
+</div>
+<div class="group relative glass-edge bg-surface-container rounded-2xl overflow-hidden p-6 transition-all duration-500 hover:scale-[1.02] mt-0 md:mt-stack-lg">
+<div class="aspect-[4/3] rounded-xl overflow-hidden relative mb-stack-md">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXBNs_1PTojbRY2BCRrykjgi0XkhQrLaJMrKUcBA6LT2x43d5SOYm6e7DmPzpozCKaRLi1wkFAbf0PL1RSDqjxuVcH7qgrpGf-MydKv5Tu8C6ipA95QmJzwbTYnKlrx7kpzNDhlLdH2H3pfd4q4mw70w2dUM9xEZcUC1kJTNokjkaO-qSl_RyEvmumTxxMyD7Lw9O-IXbLTML6GTnbH8TXRllqBNIaTPFzNjr44cSyevjPvIESd6O-6ies8e-cd4gYGo-nTq0bjuI">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="font-caption text-primary uppercase tracking-widest mb-2 block">Art Direction</span>
+<h3 class="font-headline-sm text-on-surface">Dreams</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">open_in_new</span>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full pt-stack-lg pb-stack-md bg-background border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<span class="font-display-lg text-headline-sm md:text-headline-md text-on-surface">NASASIIRA</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mx-auto md:mx-0">
+                    © 2026 Nasasiira Patrick. All rights reserved. Built for the future of African design.
+                </p>
+</div>
+<div class="flex gap-stack-md mt-stack-md md:mt-0">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

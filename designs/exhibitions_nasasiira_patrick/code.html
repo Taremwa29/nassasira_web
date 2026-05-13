@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NASASIIRA | Visual Communications</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@300;400;600;700&amp;family=EB+Garamond:ital,wght@1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#1e3f39",
+                      "on-secondary-fixed-variant": "#4f4536",
+                      "secondary-fixed": "#f0e0cb",
+                      "tertiary-fixed-dim": "#cac6be",
+                      "on-primary-container": "#90d6c7",
+                      "tertiary-fixed": "#e7e2d9",
+                      "on-surface-variant": "#bec9c5",
+                      "surface-container": "#012520",
+                      "on-primary": "#003730",
+                      "outline-variant": "#3f4946",
+                      "background": "#001713",
+                      "surface-variant": "#1a3a35",
+                      "secondary-fixed-dim": "#d3c4b0",
+                      "on-error": "#690005",
+                      "inverse-surface": "#c6eae2",
+                      "tertiary": "#cac6be",
+                      "tertiary-container": "#56544d",
+                      "surface": "#001713",
+                      "primary": "#8ed4c4",
+                      "on-tertiary-container": "#cdc8c0",
+                      "secondary-container": "#524838",
+                      "secondary": "#d3c4b0",
+                      "surface-container-lowest": "#00110e",
+                      "inverse-primary": "#1f695d",
+                      "surface-container-low": "#00201c",
+                      "surface-dim": "#001713",
+                      "on-surface": "#c6eae2",
+                      "on-error-container": "#ffdad6",
+                      "outline": "#89938f",
+                      "primary-container": "#0f5f53",
+                      "surface-tint": "#8ed4c4",
+                      "surface-container-highest": "#1a3a35",
+                      "inverse-on-surface": "#153630",
+                      "error": "#ffb4ab",
+                      "on-tertiary": "#32302b",
+                      "primary-fixed": "#a9f0e0",
+                      "on-secondary-container": "#c5b6a2",
+                      "on-background": "#c6eae2",
+                      "surface-container-high": "#0d2f2a",
+                      "on-primary-fixed-variant": "#005046",
+                      "on-secondary-fixed": "#221a0d",
+                      "on-tertiary-fixed-variant": "#494740",
+                      "on-secondary": "#382f21",
+                      "primary-fixed-dim": "#8ed4c4",
+                      "on-primary-fixed": "#00201b",
+                      "on-tertiary-fixed": "#1d1c16",
+                      "error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "section-gap": "160px"
+              },
+              "fontFamily": {
+                      "body-sm": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "headline-md-mobile": ["Bodoni Moda"],
+                      "headline-md": ["Bodoni Moda"],
+                      "accent-italic": ["EB Garamond"],
+                      "display-lg": ["Bodoni Moda"],
+                      "display-lg-mobile": ["Bodoni Moda"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-md-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "400"}],
+                      "headline-md": ["42px", {"lineHeight": "48px", "fontWeight": "400"}],
+                      "accent-italic": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "display-lg": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-inner-border {
+            border: 1px solid rgba(198, 234, 226, 0.2);
+        }
+        .the-lens {
+            background: radial-gradient(circle at center, rgba(142, 212, 196, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #001713;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a3a35;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- The Lens Backlight -->
+<div class="the-lens fixed inset-0 z-0"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-margin-mobile md:top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/20 bg-surface-variant/60 dark:bg-surface-variant/60 backdrop-blur-xl shadow-2xl flex justify-between items-center px-gutter py-4 z-50">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary uppercase tracking-widest text-[20px] md:text-[24px]">
+            NASASIIRA
+        </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Exhibitions</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Archive</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">Studio</a>
+<a class="text-on-surface-variant/80 font-body-lg text-body-lg hover:text-primary transition-all duration-500 hover:scale-105" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-label-caps text-label-caps hover:scale-105 active:scale-95 transition-all duration-200">
+                Connect
+            </button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img alt="Nasasiira Patrick Profile" class="w-full h-full object-cover" data-alt="A professional studio portrait of a visionary African creative director with short groomed hair, wearing a structured minimalist charcoal blazer. The lighting is dramatic and low-key, with a soft emerald green rim light reflecting off the skin, evoking a sense of technological sophistication and artistic depth. The background is a deep, blurred forest green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-sanVMCibgydhu-xOVAGb8P5NZ7eko8iniaoXWe9zhLBM5etNE1LXliUso9CEL6CSmsKbxEsQf9R34fqEHc5V-wBjJLoxnsFRYzSn0bvNPgvUul4kPFxYtvZAkrHhtiRk3NLvlDz5FazFew6tvjbXMPQzC6KQGuH4R4YFgiSICWM3hnAm8dkuPp-ak2VsYiGS7utcl0L6CeCNj1T3u3xvRfFav-QffwfhSndmzlq_kfwX7n8l6-G-uhujG3voASsQd09dg0t5CRY"/>
+</div>
+</div>
+</nav>
+<main class="relative z-10">
+<!-- Hero Space -->
+<section class="min-h-screen flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop pt-40 pb-section-gap">
+<div class="max-w-container-max w-full">
+<span class="font-accent-italic text-accent-italic text-primary block mb-4 italic">Curation of Digital Artifacts</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface max-w-4xl leading-tight">
+                    Interdisciplinary <br/> <span class="text-outline">Visual Communication</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-8">
+                    An immersive odyssey through the intersections of African identity, futuristic aesthetics, and high-fidelity technical execution.
+                </p>
+</div>
+</section>
+<!-- EXHIBITIONS SECTION -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap" id="exhibitions">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">THE GALLERY</span>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface">Permanent Exhibitions</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-4xl text-primary/30">unfold_more</span>
+</div>
+</div>
+<!-- Floating Glassmorphism Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<!-- 1. Photography Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-[32px] glass-inner-border bg-surface-variant/60 backdrop-blur-[40px] shadow-2xl transition-all duration-700 hover:-translate-y-4">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A cinematic, high-contrast photograph of architectural structures in a modern African city, shot during the blue hour. The image features sharp geometric shadows and glowing emerald green neon accents that slice through the deep forest green environment. The atmosphere is quiet, sophisticated, and technologically advanced, mimicking an immersive museum display." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHrh4dNrEWvcq18PmIZB2bvzrcuoECy8jKzemTdXyah-wQ63qu4ayVkfekvx0Y94AwNR-Soll0aohI7j5qjlkwF_M5sTT-Qq3F27Y8sHmNw2WMDFt6rzzQR6D-n_PlOqvTEaOLVU3HRb7ffWNHNitEHFQcqH9TDicfUDSZFon3Yyj1v8GLf9MO9MYKcuWz60fSrk3VWZXD5n5HWRszyHgF1Ur2KR-R1dz8UHsbRoLt1zCFuTqQvB9S8218VP34kAik4rnDTl6-S1c"/>
+</div>
+<div class="p-12">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="font-label-caps text-label-caps text-primary/60 block mb-2">01 — COLLECTION</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Photography</h3>
+</div>
+<span class="material-symbols-outlined text-5xl text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">camera</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                                Major Photography Work: A deep dive into the 'Kinshasa Modernism' series, capturing the soul of architectural evolution through a high-contrast, cinematic lens.
+                            </p>
+<button class="group/btn flex items-center gap-4 text-primary font-label-caps text-label-caps tracking-widest">
+                                ENTER PORTAL 
+                                <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2">arrow_right_alt</span>
+</button>
+</div>
+</div>
+<!-- 2. Print Production Card -->
+<div class="md:col-span-4 md:mt-32 group relative overflow-hidden rounded-[32px] glass-inner-border bg-surface-variant/60 backdrop-blur-[40px] shadow-2xl transition-all duration-700 hover:-translate-y-4">
+<div class="aspect-[3/4] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A close-up view of premium, textured print materials featuring intricate silver foil stamping and deep-pressed typography. The paper is a heavy, matte deep forest green stock, reflecting soft, diffused studio lighting. The aesthetic is extremely tactile and high-end, showcasing the marriage of traditional craftsmanship and modern design precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB246KMMuwtGMsPqKkrdjqzfq1bXWjvmtPXj8ZIuk0WB3LGo7HKhqGkSNzmuOnCfOj3YpczdjzBpSsEU8tpEJydN64eHmUHo6emeaJqmBk3HF0KF6J6FerRy3m2EYF1Hsdb_GtCZSdwLpo5n6eDbj0dkYLauQIDhoBzqjzPz3Q-satEtGfnvVsqtAIONV1FX51Q0uGt_PxLGHB6xfcvUAZZCwdOqCTfAh3k_4i8FECMEjYWQkPUPqxbNur5ntmLK9rAcXNr4tlPXHQ"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-caps text-label-caps text-primary/60">02 — CRAFT</span>
+<span class="material-symbols-outlined text-3xl text-primary">print</span>
+</div>
+<h3 class="font-headline-md text-[32px] text-on-surface mb-6">Print Production</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8">
+                                Major Printing Work: Exploring tactile identities and the physical weight of branding through luxury materiality.
+                            </p>
+<button class="w-full py-4 border border-primary/20 rounded-xl hover:bg-primary hover:text-on-primary transition-colors font-label-caps text-label-caps">
+                                VIEW CATALOGUE
+                            </button>
+</div>
+</div>
+<!-- 3. Web Media Card -->
+<div class="md:col-span-12 group relative overflow-hidden rounded-[32px] glass-inner-border bg-surface-variant/60 backdrop-blur-[40px] shadow-2xl transition-all duration-700 hover:-translate-y-4">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/2 p-12 flex flex-col justify-center">
+<div class="mb-10">
+<span class="font-label-caps text-label-caps text-primary/60 block mb-2">03 — INTERACTIVE</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Web Media</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-md">
+                                    Major Web Media Work: Engineering fluid, high-fidelity digital experiences that bridge the gap between user and interface.
+                                </p>
+<div class="flex gap-6">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">REAL-TIME</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">RESPONSIVE</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 aspect-[16/9] md:aspect-auto overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A futuristic web interface display on a curved ultra-wide monitor in a dark, minimalist workspace. The screen glows with a complex glassmorphic dashboard featuring emerald green data visualizations and translucent content cards. The room is shadowed in deep forest tones, with soft light reflections bouncing off the glass desk surface, creating a cinematic tech atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABzB5ufjRoAXu4u9vo-VBD0TKAYdJ36NGo3vDwJHs1i91tVrjcBtN12cKI_f_aRz1mJbgvG_1Ma4YVWmOfhSrKP44oWb6mEp-0E-yIyTN3LfONI2Zl1l4mqqLPmQ_xTkZYBNit3zS-VA5p3QpIMxvQpGEdeY2aJ3HCWQP3SoPkCM9bs5Ap0c8jvY3HyoLBZmV4CBjSWXD9oiR0_kb80-bxeRvw2MLpFcbOR_lbOTH4GseR7cY-NZfP-74IIPnmBHVlZRr6ED9zoas"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Studio Note -->
+<section class="py-section-gap px-margin-mobile">
+<div class="max-w-3xl mx-auto text-center">
+<span class="material-symbols-outlined text-6xl text-primary/20 mb-8">blur_on</span>
+<p class="font-accent-italic text-accent-italic text-on-surface text-[32px] md:text-[42px] leading-relaxed">
+                    "Visual communication is the silent dialogue between <span class="text-primary italic">technology</span> and human <span class="text-primary italic">spirit</span>."
+                </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-8 bg-background dark:bg-background border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<div class="font-headline-md text-headline-md text-on-surface">NASASIIRA</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">© 2024 Nasasiira Patrick. All rights reserved. Built for the future of African design.</p>
+</div>
+<div class="flex gap-8 items-center mt-8 md:mt-0">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Behance</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
