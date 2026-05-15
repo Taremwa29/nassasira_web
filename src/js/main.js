@@ -16,7 +16,8 @@ window.tailwind.config = {
                 "secondary-container": "#2c4d47",
                 "on-secondary": "#153630",
                 "outline": "#89938f",
-                "outline-variant": "#3f4946"
+                "outline-variant": "#3f4946",
+                "accent-brown": "#8B5E34"
             },
             "spacing": {
                 "margin-mobile": "20px",
