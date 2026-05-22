@@ -51,6 +51,76 @@ window.tailwind.config = {
     }
 }
 
+function initPhotoGrid() {
+    const grid = document.getElementById('photo-grid');
+    if (!grid) return;
+
+    const pool = [
+        '/photos/NP/POTRAITS/4L7B3929.jpg',
+        '/photos/NP/POTRAITS/IMG_1.jpg',
+        '/photos/NP/POTRAITS/IMG_22.jpg',
+        '/photos/NP/POTRAITS/_80A0944.jpg',
+        '/photos/NP/POTRAITS/KUHI9911.JPG',
+        '/photos/NP/POTRAITS/_80A6703.jpg',
+        '/photos/NP/POTRAITS/IMG_3.jpg',
+        '/photos/NP/POTRAITS/IMG_7.jpg',
+        '/photos/NP/CULTURE/afri(3).jpg',
+        '/photos/NP/CULTURE/IMG-11.jpg',
+        '/photos/NP/CULTURE/IMG-47.jpg',
+        '/photos/NP/CULTURE/afrii(16).jpg',
+        '/photos/NP/CULTURE/afriii(1).jpg',
+        '/photos/NP/CULTURE/afri(65).jpg',
+        '/photos/NP/CULTURE/IMG-62.jpg',
+        '/photos/NP/NATURE/080A0915.JPG',
+        '/photos/NP/NATURE/DEBL1608.JPG',
+        '/photos/NP/NATURE/KUHI7488.jpg',
+        '/photos/NP/NATURE/7TKL0641.JPG',
+        '/photos/NP/NATURE/DEBL1631.JPG',
+        '/photos/NP/EVENTS/GIL_7994.JPG',
+        '/photos/NP/EVENTS/GIL_8305.JPG',
+        '/photos/NP/EVENTS/KUHI4607.jpg',
+        '/photos/NP/EVENTS/GIL_8059.JPG',
+        '/photos/NP/BLACK & WHITE/7TKL1250.JPG',
+        '/photos/NP/BLACK & WHITE/KUHI8625.jpg',
+        '/photos/NP/GRADUATIONS/IMG_11.jpg',
+        '/photos/NP/GRADUATIONS/hhh (1).jpg',
+    ].map(p => encodeURI(p));
+
+    // Shuffle
+    for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+
+    const cells = [
+        document.getElementById('pg-0'),
+        document.getElementById('pg-1'),
+        document.getElementById('pg-2'),
+        document.getElementById('pg-3'),
+    ];
+
+    let photoIndex = 0;
+    let cellIndex = 0;
+
+    // Seed all 4 cells immediately
+    cells.forEach(img => {
+        img.src = pool[photoIndex % pool.length];
+        photoIndex++;
+    });
+
+    // Cycle one cell at a time with crossfade
+    setInterval(() => {
+        const img = cells[cellIndex];
+        img.style.opacity = '0';
+        setTimeout(() => {
+            img.src = pool[photoIndex % pool.length];
+            photoIndex++;
+            img.style.opacity = '1';
+        }, 700);
+        cellIndex = (cellIndex + 1) % 4;
+    }, 2500);
+}
+
 function smoothScrollTo(element, target, duration) {
     const start = element.scrollTop;
     const distance = target - start;
@@ -188,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initCustomCursor();
+    initPhotoGrid();
 
     // Pre-loader Logic
     const loader = document.getElementById('loader');
