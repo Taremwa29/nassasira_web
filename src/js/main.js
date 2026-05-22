@@ -560,11 +560,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let activeCardIndex = 0;
         let isTransitioning = false;
         let scrollTimeout = null;
+        let originCard = null;
+        let originRect = null;
+        let previousActiveCardIndex = -1;
 
         function initStack(category) {
             currentCategory = category;
             categoryPhotos = photoCategories[category] || [];
             activeCardIndex = 0;
+            previousActiveCardIndex = -1;
             
             categoryLabel.textContent = categoryDisplayNames[category] || category;
             stackContainer.innerHTML = '';
@@ -674,31 +678,64 @@ document.addEventListener('DOMContentLoaded', () => {
         categoriesGrid.addEventListener('click', (e) => {
             const card = e.target.closest('.category-card');
             if (!card) return;
-            
+
             const category = card.dataset.category;
             if (!category) return;
-            
+
+            originCard = card;
+            originRect = card.getBoundingClientRect();
+
             initStack(category);
-            
             document.body.style.overflow = 'hidden';
-            stackViewer.classList.remove('pointer-events-none', 'opacity-0');
-            
+
+            const { top, right, bottom, left } = originRect;
+            const rClip = window.innerWidth - right;
+            const bClip = window.innerHeight - bottom;
+
+            stackViewer.style.transition = 'none';
+            stackViewer.style.clipPath = `inset(${top}px ${rClip}px ${bClip}px ${left}px round 16px)`;
+            stackViewer.classList.remove('opacity-0', 'pointer-events-none');
+
+            stackViewer.offsetHeight; // force reflow
+
+            stackViewer.style.transition = 'clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            stackViewer.style.clipPath = 'inset(0px 0px 0px 0px round 0px)';
+
             const categoriesView = document.getElementById('categories-view');
-            categoriesView.classList.add('opacity-0', 'scale-95');
+            categoriesView.classList.add('categories-blurred');
         });
 
         // Close triggers
-        closeBtn.addEventListener('click', () => {
+        function closeStack() {
             document.body.style.overflow = '';
-            stackViewer.classList.add('pointer-events-none', 'opacity-0');
-            
+
+            if (originRect) {
+                const { top, right, bottom, left } = originRect;
+                const rClip = window.innerWidth - right;
+                const bClip = window.innerHeight - bottom;
+                stackViewer.style.transition = 'clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                stackViewer.style.clipPath = `inset(${top}px ${rClip}px ${bClip}px ${left}px round 16px)`;
+            }
+
             const categoriesView = document.getElementById('categories-view');
-            categoriesView.classList.remove('opacity-0', 'scale-95');
-            
+            categoriesView.classList.remove('categories-blurred');
+
             setTimeout(() => {
+                stackViewer.classList.add('opacity-0', 'pointer-events-none');
+                stackViewer.style.clipPath = '';
+                stackViewer.style.transition = '';
                 stackContainer.innerHTML = '';
-            }, 700);
-        });
+
+                if (originCard) {
+                    originCard.classList.add('card-pulse');
+                    setTimeout(() => originCard.classList.remove('card-pulse'), 800);
+                    originCard = null;
+                }
+                originRect = null;
+            }, 600);
+        }
+
+        closeBtn.addEventListener('click', closeStack);
 
         // Smooth Scroll Navigation to Card
         function scrollToCard(index) {
@@ -740,7 +777,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 prevBtn.click();
             } else if (e.key === 'Escape') {
-                closeBtn.click();
+                closeStack();
             }
         });
 
