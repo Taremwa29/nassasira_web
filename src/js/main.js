@@ -607,7 +607,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const rawProgress = scrollTop / scrollPerCard;
             const activeIdx = Math.floor(rawProgress);
             activeCardIndex = Math.min(categoryPhotos.length - 1, Math.max(0, activeIdx));
-            
+
+            if (activeCardIndex !== previousActiveCardIndex) {
+                previousActiveCardIndex = activeCardIndex;
+                const glowEl = document.getElementById('stack-glow');
+                if (glowEl) {
+                    glowEl.classList.remove('glow-active');
+                    void glowEl.offsetWidth;
+                    glowEl.classList.add('glow-active');
+                }
+            }
+
             const currentCardProgress = rawProgress - activeIdx;
             
             counter.textContent = `${String(activeCardIndex + 1).padStart(2, '0')} / ${String(categoryPhotos.length).padStart(2, '0')}`;
@@ -636,13 +646,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (delta < 0) {
                     // Exited card transition
                     const progress = -delta;
+                    const squeezeY = 1 - Math.min(progress, 0.1) * 0.5;
                     const translateY = -progress * 120;
                     const translateX = (idx % 2 === 0 ? -1 : 1) * progress * 30;
                     const rotate = -progress * 12 * (idx % 2 === 0 ? 1 : -1);
                     const scale = 1 + progress * 0.1;
                     const opacity = Math.max(0, 1 - progress * 2.5);
-                    
-                    card.style.transform = `translate3d(${translateX}vw, ${translateY}vh, 0) rotate(${rotate}deg) scale(${scale})`;
+
+                    card.style.transform = `translate3d(${translateX}vw, ${translateY}vh, 0) rotate(${rotate}deg) scale(${scale}) scaleY(${squeezeY})`;
                     card.style.opacity = opacity;
                     card.style.pointerEvents = 'none';
                     card.style.zIndex = 100 + idx;
