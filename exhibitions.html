@@ -88,8 +88,13 @@
 <div class="lg:col-span-12 glass-card rounded-xl overflow-hidden group hover:shadow-2xl transition-all duration-700">
 <div class="grid grid-cols-1 md:grid-cols-2">
 <div class="relative h-[400px] md:h-full overflow-hidden">
-<img alt="Exhibition Photography" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrr1mVR7JIToEqlVjYzAvDDBasdtM2HKR2Wbi2rzIHgUYRGsNwQGyg6AIU3awmkdjaRZj7Q7-e3Dgpfn4K3yOImROuwJXS4IjYdjMCnBhL-PQYo5F0hF1XgqQZYflrvY_TtyyHM7w2r40ptdu4ffmhkdn9q3j4nEgfGTmtnMzZVdDjb6l-aA3HlP3o_ip0IWz7rlINs0XfnCrQ0XW8YZcS5QDw4rUUzM5WcwZ1gsy0Qc1fhbAdUSlSU4-Bd60PV9qofJCwajjPsOA">
-<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-variant/40"></div>
+<div id="ex-photo-grid" class="w-full h-full grid grid-cols-2 grid-rows-2 gap-0.5">
+    <div class="overflow-hidden"><img id="ex-pg-0" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
+    <div class="overflow-hidden"><img id="ex-pg-1" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
+    <div class="overflow-hidden"><img id="ex-pg-2" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
+    <div class="overflow-hidden"><img id="ex-pg-3" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-variant/40 pointer-events-none"></div>
 </div>
 <div class="p-stack-lg flex flex-col justify-center">
 <div class="flex items-center gap-stack-sm mb-stack-md">
@@ -101,11 +106,10 @@
                             Capturing the unseen moments of craftsmanship across East Africa. This project documents the transition of ancestral techniques into contemporary visual spaces through high-contrast monochrome studies and cinematic lighting.
                         </p>
 <div class="flex flex-wrap gap-stack-sm mb-stack-lg">
-<span class="bg-primary/10 text-primary px-stack-sm py-1 rounded-full text-caption border border-primary/20">2026 Series</span>
 <span class="bg-primary/10 text-primary px-stack-sm py-1 rounded-full text-caption border border-primary/20">Documentary</span>
 </div>
 <button class="w-fit flex items-center gap-stack-sm text-primary font-label-md hover:translate-x-2 transition-transform duration-300">
-                            Explore Archive <span class="material-symbols-outlined">arrow_forward</span>
+                            Download Documentation <span class="material-symbols-outlined">download</span>
 </button>
 </div>
 </div>
@@ -121,7 +125,7 @@
                         Premium brand collateral that prioritizes the sensory experience of physical media through specialized paper stocks and artisanal finishes.
                     </p>
 <div class="relative rounded-lg overflow-hidden h-[300px] mb-stack-lg">
-<img alt="Print Production Work" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF-wIzt5pSLStbOoQ_jTy9GvZ2r7OPJerOVpo0YIzJT4uMKjJ0pOj9ZSU_ZKRtA_ux7GgpyT91sQwxB9VxEkdARdn8nqQ5vY7KjXb0BZy86aUkLavtVsBPRBma3XadMk-DZvfInJZidqkI1VROhf9Mc1MfPpH2qNTcdEEqxw8CIvUpHDs28wVq9vRXGQZHAxg3wQQw8YMXkzLSCTZ709LwCox9bS93U2JNBmWcV78MISKWXyrKkWbhSkhqJIWPLZSnrNIOvWF5Kn8">
+<img id="tactile-slide" alt="Branding & Printing" class="w-full h-full object-cover transition-opacity duration-700" src="">
 </div>
 <div class="flex justify-between items-center">
 <div class="flex -space-x-3">
@@ -135,8 +139,8 @@
 </div>
 <div class="lg:col-span-5 glass-card rounded-xl overflow-hidden group hover:shadow-2xl transition-all duration-700">
 <div class="h-[250px] relative overflow-hidden">
-<img alt="Web Media Interface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQayJ_htV1FbZpqmzpP-acqd4unqerJg3FRGgzZTIgQCIXqty7ciGs3jiUsJ9E8GN-apNJLu400_B6ZXz2x-rIyBfjBf8KGE4gBMGa_Ey3x2arOxsVINrOo0XQPOLNs9jAWVlhLvIFZsCDyflYAJVymsMrYbP7T28MqIrYxny0gLQy1RL93PcUPYiBEZp4C0-sKoM1LzF9boNs_sTMZgtAyPVMByIiV23lM-7wyYdtUVgmKhMu0z6ewB0yEKokwnXiTs-v-0dU9fg">
-<div class="absolute inset-0 bg-gradient-to-t from-surface-variant to-transparent"></div>
+<img id="digital-slide" alt="Graphic Design" class="w-full h-full object-cover transition-opacity duration-700" src="">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-variant to-transparent pointer-events-none"></div>
 </div>
 <div class="p-stack-lg">
 <div class="flex items-center gap-stack-sm mb-stack-md">
@@ -166,12 +170,12 @@
                 Join the exclusive circle of partners and collectors who are redefining the African visual landscape.
             </p>
 <div class="flex flex-col md:flex-row justify-center gap-stack-sm">
-<button class="bg-primary text-on-primary font-label-md px-stack-lg py-4 rounded-full hover:shadow-[0_0_20px_rgba(142,212,196,0.3)] transition-all">
+<a href="contact.html" class="bg-primary text-on-primary font-label-md px-stack-lg py-4 rounded-full hover:shadow-[0_0_20px_rgba(142,212,196,0.3)] transition-all text-center">
                     Request Catalog
-                </button>
-<button class="border border-outline-variant text-on-surface font-label-md px-stack-lg py-4 rounded-full backdrop-blur-md hover:bg-white/5 transition-all">
+                </a>
+<a href="works.html" class="border border-outline-variant text-on-surface font-label-md px-stack-lg py-4 rounded-full backdrop-blur-md hover:bg-white/5 transition-all text-center">
                     Virtual Tour
-                </button>
+                </a>
 </div>
 </section>
 </main>

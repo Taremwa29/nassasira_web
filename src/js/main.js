@@ -121,6 +121,113 @@ function initPhotoGrid() {
     }, 2500);
 }
 
+function initExhibitionSlides() {
+    // Photography grid (ex-pg-0 … ex-pg-3)
+    const exGrid = document.getElementById('ex-photo-grid');
+    if (exGrid) {
+        const exPool = [
+            '/photos/NP/POTRAITS/4L7B3929.jpg',
+            '/photos/NP/POTRAITS/IMG_1.jpg',
+            '/photos/NP/POTRAITS/_80A0944.jpg',
+            '/photos/NP/POTRAITS/IMG_22.jpg',
+            '/photos/NP/POTRAITS/KUHI9911.JPG',
+            '/photos/NP/POTRAITS/_80A6703.jpg',
+            '/photos/NP/CULTURE/afri(3).jpg',
+            '/photos/NP/CULTURE/IMG-11.jpg',
+            '/photos/NP/CULTURE/IMG-47.jpg',
+            '/photos/NP/CULTURE/afrii(16).jpg',
+            '/photos/NP/CULTURE/afriii(1).jpg',
+            '/photos/NP/CULTURE/IMG-62.jpg',
+            '/photos/NP/NATURE/080A0915.JPG',
+            '/photos/NP/NATURE/DEBL1608.JPG',
+            '/photos/NP/NATURE/KUHI7488.jpg',
+            '/photos/NP/NATURE/DEBL1631.JPG',
+            '/photos/NP/EVENTS/GIL_7994.JPG',
+            '/photos/NP/EVENTS/GIL_8305.JPG',
+            '/photos/NP/EVENTS/KUHI4607.jpg',
+            '/photos/NP/BLACK & WHITE/7TKL1250.JPG',
+            '/photos/NP/BLACK & WHITE/KUHI8625.jpg',
+            '/photos/NP/GRADUATIONS/IMG_11.jpg',
+            '/photos/NP/ARCHITECTURE/7TKL0546.JPG',
+            '/photos/NP/ARCHITECTURE/DEBL1822.JPG',
+        ].map(p => encodeURI(p));
+        for (let i = exPool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [exPool[i], exPool[j]] = [exPool[j], exPool[i]];
+        }
+        const exCells = ['ex-pg-0','ex-pg-1','ex-pg-2','ex-pg-3'].map(id => document.getElementById(id));
+        let exPhoto = 0, exCell = 0;
+        exCells.forEach(img => { img.src = exPool[exPhoto++ % exPool.length]; });
+        setInterval(() => {
+            const img = exCells[exCell];
+            img.style.opacity = '0';
+            setTimeout(() => { img.src = exPool[exPhoto++ % exPool.length]; img.style.opacity = '1'; }, 700);
+            exCell = (exCell + 1) % 4;
+        }, 2500);
+    }
+
+    // Tactile Identity slideshow — Branding & Printing
+    const tactile = document.getElementById('tactile-slide');
+    if (tactile) {
+        const brandPool = [
+            '/photos/NP/BRANDING & PRINTING/Artboard 1nd0017tk.jpg',
+            '/photos/NP/BRANDING & PRINTING/Artboard 2nd0017tk.jpg',
+            '/photos/NP/BRANDING & PRINTING/Artboard 3nd0017tk.jpg',
+            '/photos/NP/BRANDING & PRINTING/Artboard 5@hard.jpg',
+            '/photos/NP/BRANDING & PRINTING/IMG_30.jpg',
+            '/photos/NP/BRANDING & PRINTING/IMG_32.jpg',
+            '/photos/NP/BRANDING & PRINTING/IMG_37.jpg',
+            '/photos/NP/BRANDING & PRINTING/IMG_41.jpg',
+        ].map(p => encodeURI(p));
+        let bi = 0;
+        tactile.src = brandPool[bi];
+        setInterval(() => {
+            tactile.style.opacity = '0';
+            setTimeout(() => {
+                bi = (bi + 1) % brandPool.length;
+                tactile.src = brandPool[bi];
+                tactile.style.opacity = '1';
+            }, 700);
+        }, 3000);
+    }
+
+    // Digital Ecosystems slideshow — Graphic Design
+    const digital = document.getElementById('digital-slide');
+    if (digital) {
+        const designPool = [
+            '/photos/NP/GRAPHIC DESIGN/Artboard 1@4x-100.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 1@FFD.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 1@floral.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 1clty.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 1mak.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 1next.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 2@FFD.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 2next.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 3@FFD.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 3@fasting.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 4@FFD.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 5@FFD.jpg',
+            '/photos/NP/GRAPHIC DESIGN/7SHOTS CONFERENCE PACKAGES.jpg',
+            '/photos/NP/GRAPHIC DESIGN/7SHOTS PHOTOSHOOT PACKAGES.jpg',
+            '/photos/NP/GRAPHIC DESIGN/Artboard 801-may.jpg',
+        ].map(p => encodeURI(p));
+        for (let i = designPool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [designPool[i], designPool[j]] = [designPool[j], designPool[i]];
+        }
+        let di = 0;
+        digital.src = designPool[di];
+        setInterval(() => {
+            digital.style.opacity = '0';
+            setTimeout(() => {
+                di = (di + 1) % designPool.length;
+                digital.src = designPool[di];
+                digital.style.opacity = '1';
+            }, 700);
+        }, 3500);
+    }
+}
+
 function smoothScrollTo(element, target, duration) {
     const start = element.scrollTop;
     const distance = target - start;
@@ -259,6 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCustomCursor();
     initPhotoGrid();
+    initExhibitionSlides();
 
     // Pre-loader Logic
     const loader = document.getElementById('loader');
