@@ -158,6 +158,30 @@ body {
     transform: none;
 }
 
+/* Category Card Shimmer */
+.category-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: none;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: inherit;
+    will-change: transform;
+}
+
+.category-card:hover::after {
+    transform: translateX(200%);
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Dynamic Navbar States */
 #main-nav {
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
