@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    <link href="/src/css/tailwind.css" rel="stylesheet"/>
     <link href="/src/css/style.css" rel="stylesheet"/>
     <script src="/src/js/main.js" type="module"></script>
     <title>Photography | Nasasiira Patrick</title>
@@ -17,7 +21,7 @@
 <nav class="fixed top-2 md:top-6 left-1/2 -translate-x-1/2 w-[98%] md:w-[95%] max-w-5xl z-[100] transition-all duration-500 group/nav" id="main-nav">
     <div class="glass-edge bg-surface/40 backdrop-blur-2xl rounded-full px-6 md:px-10 py-3 md:py-4 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-white/5 group-hover/nav:bg-surface/60 transition-all duration-500">
         <a class="hover:scale-110 transition-transform block shrink-0" href="index.html">
-            <img src="/photos/NP/Profile-2026.jpg.jpeg" alt="Nasasiira Patrick" class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-primary/50 hover:border-primary transition-colors shadow-lg">
+            <img src="/photos/web/NP/Profile-2026.jpg.jpg" alt="Nasasiira Patrick" class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-primary/50 hover:border-primary transition-colors shadow-lg" decoding="async">
         </a>
         <div class="hidden md:flex items-center gap-10">
             <a class="text-on-surface-variant/70 font-label-md hover:text-primary transition-all relative group/link" href="about.html">
@@ -52,7 +56,7 @@
 <div class="fixed inset-0 z-[110] bg-background/98 backdrop-blur-3xl transition-all duration-700 translate-x-full" id="mobile-drawer">
     <div class="flex flex-col h-full p-10">
         <div class="flex justify-between items-center mb-20">
-            <img src="/photos/NP/Profile-2026.jpg.jpeg" alt="Nasasiira Patrick" class="w-12 h-12 rounded-full object-cover border-2 border-primary/50 shadow-lg">
+            <img src="/photos/web/NP/Profile-2026.jpg.jpg" alt="Nasasiira Patrick" class="w-12 h-12 rounded-full object-cover border-2 border-primary/50 shadow-lg" decoding="async">
             <button class="text-primary p-4 bg-white/5 rounded-full hover:rotate-90 transition-transform" id="menu-close">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
@@ -91,7 +95,7 @@
     <section class="masonry-grid gap-6 mb-stack-lg">
         <!-- Item 1 -->
         <div class="masonry-item relative group overflow-hidden rounded-2xl glass-card">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBchg5D8Ijn6-DWof6qNxdVNYK3CpAJjEvDuzLJLZFGVATrd2Wfilfhckt3DvjockOJalnrl0uagEzWBS-vg-LglhiVyPzQJ3dmX0FIwdPnB2p-Cv3Ay7V-ClXn6Ldd2ampCRI5iC1FnTnIAYmBY4QxqIrRUhEOprU1teUio0gXEhZUi6uv-_0PU1bKM4IylW8hXUcgZbVUL99eIqiAOWkRCbiU08UDeBSgtZPbYXyZFKUBJQsKWNKi6Jprxea3F46E-nrqHc1YODY" alt="Cinematic Portrait">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBchg5D8Ijn6-DWof6qNxdVNYK3CpAJjEvDuzLJLZFGVATrd2Wfilfhckt3DvjockOJalnrl0uagEzWBS-vg-LglhiVyPzQJ3dmX0FIwdPnB2p-Cv3Ay7V-ClXn6Ldd2ampCRI5iC1FnTnIAYmBY4QxqIrRUhEOprU1teUio0gXEhZUi6uv-_0PU1bKM4IylW8hXUcgZbVUL99eIqiAOWkRCbiU08UDeBSgtZPbYXyZFKUBJQsKWNKi6Jprxea3F46E-nrqHc1YODY" alt="Cinematic Portrait" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <span class="font-caption text-primary uppercase tracking-widest mb-2">Portrait Series</span>
                 <h3 class="font-headline-sm text-on-surface">The Silent Guardian</h3>
@@ -99,7 +103,7 @@
         </div>
         <!-- Item 2 -->
         <div class="masonry-item relative group overflow-hidden rounded-2xl glass-card">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP5MhcbI6UC4URwW78GArDQjvr97FiLcn0cMEhyTrY7ybG9B5yQHu9-SjieYxjtYhiWeN09Mrk9hkRj39QyLqYGWliiyIIc8xsbz5yiouWnvmrwuxp8rxpwu98R1CEeOnHR0Im49i-8gJPCKlE3ogianYrkeUHTD0WYZkGy_fLerdec6kd4wrbV2dTXp5btDW3EhVOE6wN6yHwWE-5c3W76GYn2gOhX5TsM5PsSlZq71QPP2poNJ8e-dys2E2vK5PTGja_UxNvhkI" alt="B&W Photography">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP5MhcbI6UC4URwW78GArDQjvr97FiLcn0cMEhyTrY7ybG9B5yQHu9-SjieYxjtYhiWeN09Mrk9hkRj39QyLqYGWliiyIIc8xsbz5yiouWnvmrwuxp8rxpwu98R1CEeOnHR0Im49i-8gJPCKlE3ogianYrkeUHTD0WYZkGy_fLerdec6kd4wrbV2dTXp5btDW3EhVOE6wN6yHwWE-5c3W76GYn2gOhX5TsM5PsSlZq71QPP2poNJ8e-dys2E2vK5PTGja_UxNvhkI" alt="B&W Photography" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <span class="font-caption text-primary uppercase tracking-widest mb-2">Black & White</span>
                 <h3 class="font-headline-sm text-on-surface">Geometric Echoes</h3>
@@ -107,7 +111,7 @@
         </div>
         <!-- Item 3 -->
         <div class="masonry-item relative group overflow-hidden rounded-2xl glass-card">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa6-y92GI1SMYLyHlR7nXUDtAwgk5bWR-8Td1zWYdKd8QgUx5i97kfKCIlGUXEi5DxOpEMCAbM0YbEc9eXwojtnEehIcO88TzEk9GlsYgbeT71uXpvOe8nMGcU9CWnzh0MbdAVC1Aui6yp6honB0JFr77oHVZo8RVSmYjTZi_UeC6SLlqS2ceCJGgy58KqfiTvWDwZK1aRLQSczVCHqeE1R92jc5DKzF6adLohfVNcmjDj3P-yhBMNQAIL-8xRn29rW43AZy3vcaQ" alt="Cultural Photography">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa6-y92GI1SMYLyHlR7nXUDtAwgk5bWR-8Td1zWYdKd8QgUx5i97kfKCIlGUXEi5DxOpEMCAbM0YbEc9eXwojtnEehIcO88TzEk9GlsYgbeT71uXpvOe8nMGcU9CWnzh0MbdAVC1Aui6yp6honB0JFr77oHVZo8RVSmYjTZi_UeC6SLlqS2ceCJGgy58KqfiTvWDwZK1aRLQSczVCHqeE1R92jc5DKzF6adLohfVNcmjDj3P-yhBMNQAIL-8xRn29rW43AZy3vcaQ" alt="Cultural Photography" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <span class="font-caption text-primary uppercase tracking-widest mb-2">Culture</span>
                 <h3 class="font-headline-sm text-on-surface">Ancestral Rhythm</h3>
@@ -115,7 +119,7 @@
         </div>
         <!-- Item 4 -->
         <div class="masonry-item relative group overflow-hidden rounded-2xl glass-card">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoLtGvi2tJ5wzJtj3z-StnIPz5XZJChB6XNaRDCLt_wkqXaE8fY0CPRfjB4c0LFVLcrCbWcWipEO3QprvqGHyQyOFgW_T7SNta0SPuLyjqnUnudLHRZ3ncjThBWL6S1LX5N_zn8bduMc38asrjomfJMWOz7mz5LIy_S4TkhGQZl2wM_sSVEADz40ltYfpwxJDLzL3dqYKPs8cyc4dCQ2sxoPl5SgSt8xVs7BR5oU99wZHU79uRhTdgwlmc8LYPIZKgTfPPnbzjT0Y" alt="Artistic Shot">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoLtGvi2tJ5wzJtj3z-StnIPz5XZJChB6XNaRDCLt_wkqXaE8fY0CPRfjB4c0LFVLcrCbWcWipEO3QprvqGHyQyOFgW_T7SNta0SPuLyjqnUnudLHRZ3ncjThBWL6S1LX5N_zn8bduMc38asrjomfJMWOz7mz5LIy_S4TkhGQZl2wM_sSVEADz40ltYfpwxJDLzL3dqYKPs8cyc4dCQ2sxoPl5SgSt8xVs7BR5oU99wZHU79uRhTdgwlmc8LYPIZKgTfPPnbzjT0Y" alt="Artistic Shot" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <span class="font-caption text-primary uppercase tracking-widest mb-2">Art Direction</span>
                 <h3 class="font-headline-sm text-on-surface">The Soul</h3>

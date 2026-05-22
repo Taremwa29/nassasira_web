@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    <link href="/src/css/tailwind.css" rel="stylesheet"/>
     <link href="/src/css/style.css" rel="stylesheet"/>
     <script src="/src/js/main.js" type="module"></script>
     <title>Nasasiira Patrick | Cinematic Portfolio</title>
@@ -16,7 +20,7 @@
 <nav class="fixed top-2 md:top-6 left-1/2 -translate-x-1/2 w-[98%] md:w-[95%] max-w-5xl z-[100] transition-all duration-500 group/nav" id="main-nav">
     <div class="glass-edge bg-surface/40 backdrop-blur-2xl rounded-full px-6 md:px-10 py-3 md:py-4 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-white/5 group-hover/nav:bg-surface/60 transition-all duration-500">
         <a class="hover:scale-110 transition-transform block shrink-0" href="index.html">
-            <img src="/photos/NP/Profile-2026.jpg.jpeg" alt="Nasasiira Patrick" class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-primary/50 hover:border-primary transition-colors shadow-lg">
+            <img src="/photos/web/NP/Profile-2026.jpg.jpg" alt="Nasasiira Patrick" class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-primary/50 hover:border-primary transition-colors shadow-lg" decoding="async">
         </a>
         <div class="hidden md:flex items-center gap-10">
             <a class="text-on-surface-variant/70 font-label-md hover:text-primary transition-all relative group/link" href="about.html">
@@ -51,7 +55,7 @@
 <div class="fixed inset-0 z-[110] bg-background/98 backdrop-blur-3xl transition-all duration-700 translate-x-full" id="mobile-drawer">
     <div class="flex flex-col h-full p-10">
         <div class="flex justify-between items-center mb-20">
-            <img src="/photos/NP/Profile-2026.jpg.jpeg" alt="Nasasiira Patrick" class="w-12 h-12 rounded-full object-cover border-2 border-primary/50 shadow-lg">
+            <img src="/photos/web/NP/Profile-2026.jpg.jpg" alt="Nasasiira Patrick" class="w-12 h-12 rounded-full object-cover border-2 border-primary/50 shadow-lg" decoding="async">
             <button class="text-primary p-4 bg-white/5 rounded-full hover:rotate-90 transition-transform" id="menu-close">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
@@ -82,7 +86,7 @@
 <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px]"></div>
 <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary-container/20 rounded-full blur-[100px]"></div>
 <div class="absolute inset-0 opacity-40 md:opacity-40">
-<img alt="Cinematic Background" class="w-full h-full object-cover grayscale brightness-50 md:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQWv2A8KLkTdCoFYLK60SucIS_g5sMSzoH-ROA7yFC7fbYxtyEiE4E5w45vHhT8qZkWDclDoyPZx8JkcRgRdDFh1zXcKKTwf7W4pSDoa_RRtZmE4-B2Hb_xZhJr1q817sx5PQvRIadriAr79EL33wqhWWA_-4y168AObwYvqO3ZWVdbFC4QGFvuyiEWudAPD9DC-XRkwOCj7glGvJ1t5AVmNclg05BrkXPiQML332IIXSKY8VS38sBVkoRqyWAwB2vybo9UyCtVX4">
+<img alt="Cinematic Background" class="w-full h-full object-cover grayscale brightness-50 md:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQWv2A8KLkTdCoFYLK60SucIS_g5sMSzoH-ROA7yFC7fbYxtyEiE4E5w45vHhT8qZkWDclDoyPZx8JkcRgRdDFh1zXcKKTwf7W4pSDoa_RRtZmE4-B2Hb_xZhJr1q817sx5PQvRIadriAr79EL33wqhWWA_-4y168AObwYvqO3ZWVdbFC4QGFvuyiEWudAPD9DC-XRkwOCj7glGvJ1t5AVmNclg05BrkXPiQML332IIXSKY8VS38sBVkoRqyWAwB2vybo9UyCtVX4" decoding="async">
 </div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile">
@@ -133,10 +137,10 @@
 <a href="works.html" class="group relative glass-edge bg-surface-container rounded-2xl overflow-hidden p-6 transition-all duration-500 hover:scale-[1.02] block">
 <div class="aspect-[4/3] rounded-xl overflow-hidden relative mb-stack-md">
     <div id="photo-grid" class="w-full h-full grid grid-cols-2 grid-rows-2 gap-0.5">
-        <div class="overflow-hidden"><img id="pg-0" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
-        <div class="overflow-hidden"><img id="pg-1" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
-        <div class="overflow-hidden"><img id="pg-2" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
-        <div class="overflow-hidden"><img id="pg-3" class="w-full h-full object-cover transition-opacity duration-700" alt=""></div>
+        <div class="overflow-hidden"><img id="pg-0" class="w-full h-full object-cover transition-opacity duration-700" alt="" decoding="async"></div>
+        <div class="overflow-hidden"><img id="pg-1" class="w-full h-full object-cover transition-opacity duration-700" alt="" decoding="async"></div>
+        <div class="overflow-hidden"><img id="pg-2" class="w-full h-full object-cover transition-opacity duration-700" alt="" decoding="async"></div>
+        <div class="overflow-hidden"><img id="pg-3" class="w-full h-full object-cover transition-opacity duration-700" alt="" decoding="async"></div>
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
@@ -150,7 +154,7 @@
 </a>
 <a href="exhibitions.html" class="group relative glass-edge bg-surface-container rounded-2xl overflow-hidden p-6 transition-all duration-500 hover:scale-[1.02] mt-0 md:mt-stack-lg block">
 <div class="aspect-[4/3] rounded-xl overflow-hidden relative mb-stack-md">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXBNs_1PTojbRY2BCRrykjgi0XkhQrLaJMrKUcBA6LT2x43d5SOYm6e7DmPzpozCKaRLi1wkFAbf0PL1RSDqjxuVcH7qgrpGf-MydKv5Tu8C6ipA95QmJzwbTYnKlrx7kpzNDhlLdH2H3pfd4q4mw70w2dUM9xEZcUC1kJTNokjkaO-qSl_RyEvmumTxxMyD7Lw9O-IXbLTML6GTnbH8TXRllqBNIaTPFzNjr44cSyevjPvIESd6O-6ies8e-cd4gYGo-nTq0bjuI">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXBNs_1PTojbRY2BCRrykjgi0XkhQrLaJMrKUcBA6LT2x43d5SOYm6e7DmPzpozCKaRLi1wkFAbf0PL1RSDqjxuVcH7qgrpGf-MydKv5Tu8C6ipA95QmJzwbTYnKlrx7kpzNDhlLdH2H3pfd4q4mw70w2dUM9xEZcUC1kJTNokjkaO-qSl_RyEvmumTxxMyD7Lw9O-IXbLTML6GTnbH8TXRllqBNIaTPFzNjr44cSyevjPvIESd6O-6ies8e-cd4gYGo-nTq0bjuI" decoding="async">
 <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
 <div class="flex justify-between items-start">

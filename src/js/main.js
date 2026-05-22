@@ -1,89 +1,36 @@
-// Tailwind Configuration
-window.tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            "colors": {
-                "primary": "#8ed4c4",
-                "primary-container": "#0f5f53",
-                "on-primary": "#003730",
-                "background": "#14130e",
-                "surface": "#14130e",
-                "surface-variant": "#36352f",
-                "on-surface": "#e7e2d9",
-                "on-surface-variant": "#bec9c5",
-                "secondary": "#abcec6",
-                "secondary-container": "#2c4d47",
-                "on-secondary": "#153630",
-                "outline": "#89938f",
-                "outline-variant": "#3f4946",
-                "accent-brown": "#8B5E34"
-            },
-            "spacing": {
-                "margin-mobile": "20px",
-                "margin-desktop": "64px",
-                "gutter": "24px",
-                "stack-sm": "16px",
-                "stack-md": "32px",
-                "stack-lg": "80px",
-                "container-max": "1280px"
-            },
-            "fontFamily": {
-                "display-lg": ["Montserrat"],
-                "headline-md": ["Montserrat"],
-                "headline-sm": ["Montserrat"],
-                "body-lg": ["Montserrat"],
-                "body-md": ["Montserrat"],
-                "label-md": ["Montserrat"],
-                "caption": ["Montserrat"]
-            },
-            "fontSize": {
-                "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }]
-            }
-        }
-    }
-}
-
 function initPhotoGrid() {
     const grid = document.getElementById('photo-grid');
     if (!grid) return;
 
     const pool = [
-        '/photos/NP/POTRAITS/4L7B3929.jpg',
-        '/photos/NP/POTRAITS/IMG_1.jpg',
-        '/photos/NP/POTRAITS/IMG_22.jpg',
-        '/photos/NP/POTRAITS/_80A0944.jpg',
-        '/photos/NP/POTRAITS/KUHI9911.JPG',
-        '/photos/NP/POTRAITS/_80A6703.jpg',
-        '/photos/NP/POTRAITS/IMG_3.jpg',
-        '/photos/NP/POTRAITS/IMG_7.jpg',
-        '/photos/NP/CULTURE/afri(3).jpg',
-        '/photos/NP/CULTURE/IMG-11.jpg',
-        '/photos/NP/CULTURE/IMG-47.jpg',
-        '/photos/NP/CULTURE/afrii(16).jpg',
-        '/photos/NP/CULTURE/afriii(1).jpg',
-        '/photos/NP/CULTURE/afri(65).jpg',
-        '/photos/NP/CULTURE/IMG-62.jpg',
-        '/photos/NP/NATURE/080A0915.JPG',
-        '/photos/NP/NATURE/DEBL1608.JPG',
-        '/photos/NP/NATURE/KUHI7488.jpg',
-        '/photos/NP/NATURE/7TKL0641.JPG',
-        '/photos/NP/NATURE/DEBL1631.JPG',
-        '/photos/NP/EVENTS/GIL_7994.JPG',
-        '/photos/NP/EVENTS/GIL_8305.JPG',
-        '/photos/NP/EVENTS/KUHI4607.jpg',
-        '/photos/NP/EVENTS/GIL_8059.JPG',
-        '/photos/NP/BLACK & WHITE/7TKL1250.JPG',
-        '/photos/NP/BLACK & WHITE/KUHI8625.jpg',
-        '/photos/NP/GRADUATIONS/IMG_11.jpg',
-        '/photos/NP/GRADUATIONS/hhh (1).jpg',
+        '/photos/web/NP/POTRAITS/4L7B3929.jpg',
+        '/photos/web/NP/POTRAITS/IMG_1.jpg',
+        '/photos/web/NP/POTRAITS/IMG_22.jpg',
+        '/photos/web/NP/POTRAITS/_80A0944.jpg',
+        '/photos/web/NP/POTRAITS/KUHI9911.JPG',
+        '/photos/web/NP/POTRAITS/_80A6703.jpg',
+        '/photos/web/NP/POTRAITS/IMG_3.jpg',
+        '/photos/web/NP/POTRAITS/IMG_7.jpg',
+        '/photos/web/NP/CULTURE/afri(3).jpg',
+        '/photos/web/NP/CULTURE/IMG-11.jpg',
+        '/photos/web/NP/CULTURE/IMG-47.jpg',
+        '/photos/web/NP/CULTURE/afrii(16).jpg',
+        '/photos/web/NP/CULTURE/afriii(1).jpg',
+        '/photos/web/NP/CULTURE/afri(65).jpg',
+        '/photos/web/NP/CULTURE/IMG-62.jpg',
+        '/photos/web/NP/NATURE/080A0915.JPG',
+        '/photos/web/NP/NATURE/DEBL1608.JPG',
+        '/photos/web/NP/NATURE/KUHI7488.jpg',
+        '/photos/web/NP/NATURE/7TKL0641.JPG',
+        '/photos/web/NP/NATURE/DEBL1631.JPG',
+        '/photos/web/NP/EVENTS/GIL_7994.JPG',
+        '/photos/web/NP/EVENTS/GIL_8305.JPG',
+        '/photos/web/NP/EVENTS/KUHI4607.jpg',
+        '/photos/web/NP/EVENTS/GIL_8059.JPG',
+        '/photos/web/NP/BLACK & WHITE/7TKL1250.JPG',
+        '/photos/web/NP/BLACK & WHITE/KUHI8625.jpg',
+        '/photos/web/NP/GRADUATIONS/IMG_11.jpg',
+        '/photos/web/NP/GRADUATIONS/hhh (1).jpg',
     ].map(p => encodeURI(p));
 
     // Shuffle
@@ -126,30 +73,30 @@ function initExhibitionSlides() {
     const exGrid = document.getElementById('ex-photo-grid');
     if (exGrid) {
         const exPool = [
-            '/photos/NP/POTRAITS/4L7B3929.jpg',
-            '/photos/NP/POTRAITS/IMG_1.jpg',
-            '/photos/NP/POTRAITS/_80A0944.jpg',
-            '/photos/NP/POTRAITS/IMG_22.jpg',
-            '/photos/NP/POTRAITS/KUHI9911.JPG',
-            '/photos/NP/POTRAITS/_80A6703.jpg',
-            '/photos/NP/CULTURE/afri(3).jpg',
-            '/photos/NP/CULTURE/IMG-11.jpg',
-            '/photos/NP/CULTURE/IMG-47.jpg',
-            '/photos/NP/CULTURE/afrii(16).jpg',
-            '/photos/NP/CULTURE/afriii(1).jpg',
-            '/photos/NP/CULTURE/IMG-62.jpg',
-            '/photos/NP/NATURE/080A0915.JPG',
-            '/photos/NP/NATURE/DEBL1608.JPG',
-            '/photos/NP/NATURE/KUHI7488.jpg',
-            '/photos/NP/NATURE/DEBL1631.JPG',
-            '/photos/NP/EVENTS/GIL_7994.JPG',
-            '/photos/NP/EVENTS/GIL_8305.JPG',
-            '/photos/NP/EVENTS/KUHI4607.jpg',
-            '/photos/NP/BLACK & WHITE/7TKL1250.JPG',
-            '/photos/NP/BLACK & WHITE/KUHI8625.jpg',
-            '/photos/NP/GRADUATIONS/IMG_11.jpg',
-            '/photos/NP/ARCHITECTURE/7TKL0546.JPG',
-            '/photos/NP/ARCHITECTURE/DEBL1822.JPG',
+            '/photos/web/NP/POTRAITS/4L7B3929.jpg',
+            '/photos/web/NP/POTRAITS/IMG_1.jpg',
+            '/photos/web/NP/POTRAITS/_80A0944.jpg',
+            '/photos/web/NP/POTRAITS/IMG_22.jpg',
+            '/photos/web/NP/POTRAITS/KUHI9911.JPG',
+            '/photos/web/NP/POTRAITS/_80A6703.jpg',
+            '/photos/web/NP/CULTURE/afri(3).jpg',
+            '/photos/web/NP/CULTURE/IMG-11.jpg',
+            '/photos/web/NP/CULTURE/IMG-47.jpg',
+            '/photos/web/NP/CULTURE/afrii(16).jpg',
+            '/photos/web/NP/CULTURE/afriii(1).jpg',
+            '/photos/web/NP/CULTURE/IMG-62.jpg',
+            '/photos/web/NP/NATURE/080A0915.JPG',
+            '/photos/web/NP/NATURE/DEBL1608.JPG',
+            '/photos/web/NP/NATURE/KUHI7488.jpg',
+            '/photos/web/NP/NATURE/DEBL1631.JPG',
+            '/photos/web/NP/EVENTS/GIL_7994.JPG',
+            '/photos/web/NP/EVENTS/GIL_8305.JPG',
+            '/photos/web/NP/EVENTS/KUHI4607.jpg',
+            '/photos/web/NP/BLACK & WHITE/7TKL1250.JPG',
+            '/photos/web/NP/BLACK & WHITE/KUHI8625.jpg',
+            '/photos/web/NP/GRADUATIONS/IMG_11.jpg',
+            '/photos/web/NP/ARCHITECTURE/7TKL0546.JPG',
+            '/photos/web/NP/ARCHITECTURE/DEBL1822.JPG',
         ].map(p => encodeURI(p));
         for (let i = exPool.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -170,14 +117,14 @@ function initExhibitionSlides() {
     const tactile = document.getElementById('tactile-slide');
     if (tactile) {
         const brandPool = [
-            '/photos/NP/BRANDING & PRINTING/Artboard 1nd0017tk.jpg',
-            '/photos/NP/BRANDING & PRINTING/Artboard 2nd0017tk.jpg',
-            '/photos/NP/BRANDING & PRINTING/Artboard 3nd0017tk.jpg',
-            '/photos/NP/BRANDING & PRINTING/Artboard 5@hard.jpg',
-            '/photos/NP/BRANDING & PRINTING/IMG_30.jpg',
-            '/photos/NP/BRANDING & PRINTING/IMG_32.jpg',
-            '/photos/NP/BRANDING & PRINTING/IMG_37.jpg',
-            '/photos/NP/BRANDING & PRINTING/IMG_41.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/Artboard 1nd0017tk.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/Artboard 2nd0017tk.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/Artboard 3nd0017tk.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/Artboard 5@hard.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/IMG_30.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/IMG_32.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/IMG_37.jpg',
+            '/photos/web/NP/BRANDING & PRINTING/IMG_41.jpg',
         ].map(p => encodeURI(p));
         let bi = 0;
         tactile.src = brandPool[bi];
@@ -195,21 +142,21 @@ function initExhibitionSlides() {
     const digital = document.getElementById('digital-slide');
     if (digital) {
         const designPool = [
-            '/photos/NP/GRAPHIC DESIGN/Artboard 1@4x-100.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 1@FFD.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 1@floral.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 1clty.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 1mak.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 1next.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 2@FFD.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 2next.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 3@FFD.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 3@fasting.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 4@FFD.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 5@FFD.jpg',
-            '/photos/NP/GRAPHIC DESIGN/7SHOTS CONFERENCE PACKAGES.jpg',
-            '/photos/NP/GRAPHIC DESIGN/7SHOTS PHOTOSHOOT PACKAGES.jpg',
-            '/photos/NP/GRAPHIC DESIGN/Artboard 801-may.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 1@4x-100.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 1@FFD.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 1@floral.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 1clty.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 1mak.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 1next.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 2@FFD.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 2next.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 3@FFD.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 3@fasting.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 4@FFD.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 5@FFD.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/7SHOTS CONFERENCE PACKAGES.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/7SHOTS PHOTOSHOOT PACKAGES.jpg',
+            '/photos/web/NP/GRAPHIC DESIGN/Artboard 801-may.jpg',
         ].map(p => encodeURI(p));
         for (let i = designPool.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -694,7 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (photos.length === 0) return;
             
             const coverPhoto = photos[0];
-            const coverUrl = encodeURI(`/photos/NP/${cat}/${coverPhoto}`);
+            const coverUrl = encodeURI(`/photos/web/NP/${cat}/${coverPhoto}`);
             
             const cardHTML = `
                 <div class="category-card relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group glass-card" data-category="${cat}">
@@ -753,7 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stackContainer.innerHTML = '';
             
             categoryPhotos.forEach((photo, idx) => {
-                const photoUrl = encodeURI(`/photos/NP/${category}/${photo}`);
+                const photoUrl = encodeURI(`/photos/web/NP/${category}/${photo}`);
                 const card = document.createElement('div');
                 card.className = 'stack-card rounded-2xl overflow-hidden glass-card shadow-2xl flex flex-col border border-white/10 bg-surface-variant/40 p-2 md:p-3 pb-4 md:pb-6';
                 card.style.display = 'none';
