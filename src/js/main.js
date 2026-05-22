@@ -528,7 +528,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             categoriesGrid.insertAdjacentHTML('beforeend', cardHTML);
+            const renderedCard = categoriesGrid.lastElementChild;
+            renderedCard.style.setProperty('--stagger-index', categoryOrder.indexOf(cat));
+            renderedCard.classList.add('card-entrance');
         });
+
+        const cardEntranceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('card-visible');
+                    cardEntranceObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card-entrance').forEach(card => cardEntranceObserver.observe(card));
 
         // 3D Stack Logic
         const stackContainer = document.getElementById('stack-container');
