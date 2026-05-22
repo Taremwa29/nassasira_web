@@ -741,15 +741,8 @@ document.addEventListener('DOMContentLoaded', () => {
         function scrollToCard(index) {
             isTransitioning = true;
             stackContainer.classList.remove('scrolling');
-            
-            stackViewer.scrollTo({
-                top: index * scrollPerCard,
-                behavior: 'smooth'
-            });
-            
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 600);
+            smoothScrollTo(stackViewer, index * scrollPerCard, 500);
+            setTimeout(() => { isTransitioning = false; }, 500);
         }
 
         nextBtn.addEventListener('click', () => {
