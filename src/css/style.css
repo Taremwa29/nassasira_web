@@ -112,6 +112,32 @@ body {
     50% { opacity: 1; text-shadow: 0 0 20px var(--primary); }
 }
 
+/* Hero Word Reveal */
+.word-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    line-height: inherit;
+}
+
+.word-inner {
+    display: inline-block;
+    transform: translateY(110%);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.word-inner.word-revealed {
+    transform: translateY(0);
+}
+
+.hero-subtitle {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.hero-subtitle.subtitle-revealed {
+    opacity: 1;
+}
 
 /* Dynamic Navbar States */
 #main-nav {
