@@ -11,6 +11,7 @@ export default defineConfig({
         exhibitions: resolve(__dirname, 'exhibitions.html'),
         videos: resolve(__dirname, 'videos.html'),
         contact: resolve(__dirname, 'contact.html'),
+        photography: resolve(__dirname, 'photography.html'),
       },
     },
   },
